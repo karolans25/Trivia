@@ -1,0 +1,34 @@
+Tipo: COMIDAS
+1. ¿Cuáles son dulces típicos de México?
+a- Suspiro, turrón, alfajor
+b- Papajotes, torrijas, churros
+C- Borrachito, alegría, tarugos
+2. ¿Cuáles son dulces típicos de Colombia?
+A- Cucas, manjar blanco, alfandoques
+b- Éclair, charlotte, coulant de chocolate
+c- Muéganos, ate, palanquetas, camotes
+3. ¿Cuáles son comidas típicas de Colombia?
+a- Bratwurst, pretzel, schnitzel
+b- Tacos, mole, chilaquiles
+C- Bandeja paisa, ajiaco, mote de queso
+4. ¿Cuáles son comidas típicas de México?
+a- Asado, locro, empanadas
+B- Pozole, cochinita pibil, tlayuda
+c- Mandioca, chipa, araticú
+Tipo: BEBIDAS
+1. ¿Cuáles son bebidas frías típicas de México?
+a- Guaraná, jugo de caña, pulque.
+b- Pozol, pulque, tepache.
+c- Los e y los f
+2. ¿Cuáles son bebidas frías típicas de Colombia?
+a- Limoncello, sambuca, fernet
+B- Lulada, campús, jugo de borojó
+c- Trascalate, cebadina, tejuino
+3. ¿Cuáles son bebidas calientes típicas de Colombia?
+a- Carato, papelón con limón, tizana
+b- Chocolate, atole negro, ponche
+C- Canelazo, aguadepanela, chocolate
+4. ¿Cuáles son bebidas calientes típicas de México?
+a- Los a y los b
+b- Los c y los d
+c- Los e y los f

@@ -1,0 +1,61 @@
+body{
+  font-family: Impact;
+  font-size: large;
+  font-style: italic;
+  background-color: plum;
+}
+
+.container {
+  display: flex;
+  background-color: var(--color-bg);
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+
+.flex-container {
+  display: flex;
+  background-color: var(--color-bg);
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.flex-item {
+  background-color: var(--color-bg);
+  width: 30%;
+  margin: 2%;
+  text-align: center;
+  line-height: 5px;
+  font-size: 15px;
+}
+
+div {
+  display: block;
+}
+
+img{
+  width: 70%;
+}
+
+h2 {
+  color: #2800FF;
+  text-align: center;
+}
+
+input{
+  border: 2px double blueviolet;
+  border-radius: 10px;
+  text-align: center;
+  background-color: beige;
+  color: blue;
+  padding: 15px 15px 15px 15px;
+  margin: 10px 10px 10px 10px;
+}
+
+input[type=button]:hover{
+  background-color: blue;
+  cursor: pointer;
+  color: beige;
+}
