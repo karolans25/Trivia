@@ -18,7 +18,7 @@ c- Mandioca, chipa, araticú
 Tipo: BEBIDAS
 1. ¿Cuáles son bebidas frías típicas de México?
 a- Guaraná, jugo de caña, pulque.
-b- Pozol, pulque, tepache.
+B- Pozol, pulque, tepache.
 c- Los e y los f
 2. ¿Cuáles son bebidas frías típicas de Colombia?
 a- Limoncello, sambuca, fernet
@@ -29,6 +29,6 @@ a- Carato, papelón con limón, tizana
 b- Chocolate, atole negro, ponche
 C- Canelazo, aguadepanela, chocolate
 4. ¿Cuáles son bebidas calientes típicas de México?
-a- Los a y los b
+A- Los a y los b
 b- Los c y los d
 c- Los e y los f
