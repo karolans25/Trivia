@@ -41,12 +41,13 @@ function getRadioValue() {
   for (var i in preguntas){
     var pre = "pregunta-" + preguntas[i][0];
     var radios = document.getElementsByName(pre);
-    for (var radio of radios){
-      if (radio.type === 'radio' && radio.checked){
-        respuestas.push([parseInt(i)+1, radio.value]);
-        console.log(respuestas);
+    var tags = document.getElementsByTagName("radio")
+    for (var j in radios){
+      if (radios[j].type === 'radio' && radios[j].checked){
         selected = true;   
       }
+      radios[j].setAttribute("disabled", "disabled");
+      radios[j].removeAttribute("disabled");
     }
     if (!selected) {
       respuestas.push([parseInt(i)+1, "No ha respondido"]);

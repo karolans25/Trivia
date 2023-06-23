@@ -8,7 +8,7 @@
 
 var tipos = ["Comidas", "Bebidas"];
 
-escogido = 0;
+var escogido = 0;
 
 var preguntas = [ ["1. ¿Cuáles son dulces típicos de México?",
                    "2. ¿Cuáles son dulces típicos de Colombia?",
@@ -141,6 +141,8 @@ function onLoad(){
     var pre = `pregunta-${parseInt(i)+1}`;
     const pPreguntas = document.getElementById(pre);
     const radios = document.getElementsByName(pre);
+    var elementos = document.getElementsByTagName("radio");
+    console.log(elementos);
     //Modificar el valor de las etiquetas que son para pregunta
     pPreguntas.innerHTML = lasPreguntas[i];
     for (var j in lasOpciones[i]){

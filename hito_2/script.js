@@ -1,3 +1,4 @@
+
 /*
   This is your site JavaScript code - you can add interactivity!
 */
@@ -33,7 +34,10 @@ function onLoad(){
       //console.log(opc);
       const o = document.getElementById(opc);
       o.innerHTML = opciones[i][j];
+      o.style.backgroundColor = "var(--color-bg)";
+      o.style.color = "black";
       radios[j].value = opciones[i][j];
+      radios[j].checked = false;
       //console.log(radios[j].value);
     }
   }
@@ -56,12 +60,13 @@ function login(){
 
 function jugar(){
   //let nombre = prompt ("¿Cómo te llamas?");
+  //const textNombre = document.getElementById("nombreL");
   document.getElementById("bienvenida").style.display = 'block';
   const textNombre = document.getElementById("nombreL");
   nombre = nombre.toUpperCase().toLowerCase();
   nombre = nombre.charAt(0).toUpperCase().concat(nombre.substring(1, nombre.length));
   textNombre.value = nombre;
-  console.log(nombre);
+  //console.log(nombre);
   alert ("Hola " + textNombre.value);
   const msg = document.getElementById("bienvenida");
   msg.innerHTML = `Bienvenida, ${nombre}! Ahora si vamos a jugar!`;
@@ -70,34 +75,43 @@ function jugar(){
   document.getElementById("formNombre").style.display = 'none';
 }
 
-function getRadioValue() {
+function contestar() {
+  // Mostrar u ocultar lo que se necesite de la vista
   document.getElementById("reiniciar").style.display = 'flex';
   document.getElementById("contestar").style.display = 'none';
-  var respuestas = [];
+  
+  /* Lógica del proceso */
   var selected = false;
-  var output = "";
 
   for (var i in preguntas){
     var pre = "pregunta-" + preguntas[i][0];
+    var pEmoji = document.getElementById(pre);
     var radios = document.getElementsByName(pre);
     for (var radio of radios){
       if (radio.type === 'radio' && radio.checked){
-        respuestas.push([parseInt(i)+1, radio.value]);
-        console.log(respuestas);
-        selected = true;   
+        var labelR = `op-${parseInt(i)+1}.${opciones[i].indexOf(radio.value)+1}`;
+        var labelRadio = document.getElementById(labelR);
+        var labelCorrecta = document.getElementById(`op-${parseInt(i)+1}.${correctas[i]+1}`);
+        labelCorrecta.style.backgroundColor = "green";
+        labelCorrecta.style.color = "white";
+
+        if (opciones[i].indexOf(radio.value) != correctas[i]){
+          labelRadio.style.backgroundColor = "red";
+          labelRadio.style.color = "yellow";
+          pEmoji.append("\t🥺 ❌");
+        } else if (opciones[i].indexOf(radio.value) == correctas[i]){
+          pEmoji.append("\t🥰 ✅");
+        }
+        selected = true;
       }
+      //radio.setAttribute("disabled", "disabled");
     }
     if (!selected) {
-      respuestas.push([parseInt(i)+1, "No ha respondido"]);
-      //alert('No ha respondido la pregunta ' + (parseInt(i)+1).toString());
+      pEmoji.append("\t💬 ❌");
     }
-    
+    selected = false;
   }
-  
-  for (var respuesta of respuestas){
-    output += "Respuesta a la pregunta " + respuesta[0] + ":\n\t" + respuesta[1] + "\n\n";
-  }
-  alert(output);  
+          
 }
 
 

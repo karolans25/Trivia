@@ -129,12 +129,70 @@ function jugar(){
 
   //Organiza la vista del juego (visibilidad de elementos)
   document.getElementById("escoger").style.display = 'none';
-  document.getElementById("containerTrivia").style.display = 'flex';
   document.getElementById("contestar").style.display = 'flex';
-  onLoad();
-}
+  var trivia = document.getElementById("containerTrivia");
+  trivia.style.display = 'flex';
+  //Crea el banco de preguntas
+  var preg = preguntas[escogido];
+  for (var i in preg){
+    var div = document.createElement("div");
+    div.className = "flex-item";
+    trivia.appendChild(div);
+    var p = document.createElement("p");
+    p.id = `pregunta-${parseInt(i)+1}`;
+    //console.log(preg[i]);
+    p.innerHTML = preg[i];
+    /*
+    p.append(document.createElement("br"));
+    div.append(p);
+    var ops = opciones[escogido][i];
+    for (j in ops){
+      var input = document.createElement("input");
+      input.type = "radio";
+      input.id = `pregunta${parseInt(i)+1}.${parseInt(j)+1}`;
+      input.name = `pregunta-${parseInt(i)+1}`;
+      input.value = ops[j];
+      console.log(ops[j]);
+      var label = document.createElement("label");
+      label.id = `op-${parseInt(i)+1}.${parseInt(j)+1}`;
+      label.value = input.value;
+      //var br = document.createElement("br");
+      label.append(document.createElement("br"));
+      //input.appendChild(label);
+      label.appendChild(input);
+      //p.append(label);
+      //input.appendChild(label);
+      //p.appendChild(input);
+      //div.appendChild(p);
+      //console.log(div);
+      div.appendChild(input);
+      alert()
+    }
+    //div.appendChild(p);
+    console.log(trivia);
+    */
+    //<input type="radio" id="pregunta1.1" name="pregunta-1" value="">
+    //<label id="op-1.1" for="pregunta1.1"></label><br>
+    //<input type="radio" id="pregunta1.2" name="pregunta-1" value="">
+    //<label id="op-1.2" for="pregunta1.2"></label><br>
+    //<input type="radio" id="pregunta1.3" name="pregunta-1" value="">
+    //<label id="op-1.3" for="pregunta1.3"></label><br>
+  //Crea el botón de seleccionar el tipo de preguntas
+  /*
+  var divEscoger = document.getElementById("divEscoger");
+  var button = document.createElement("input");
+  button.type = "button";
+  button.id = "buttonT";
+  button.value = "Escoger";
+  button.setAttribute("onclick", "jugar(); return false");
+  divEscoger.appendChild(button);
+  */
+  //onLoad();
+  }
 
-function onLoad(){
+//}
+
+//function onLoad(){
   var lasPreguntas = preguntas[escogido];
   var lasOpciones = opciones[escogido];
   for (var i in lasPreguntas){
