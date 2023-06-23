@@ -81,7 +81,8 @@ function jugar(){
       labels[i].style.color = "black";
     }
   }
-   /*Duda Ivonne*/
+
+  /*
   var ps = document.getElementsByTagName("p");
   for (var p of ps){
     if (p.id.startsWith("pregunta-")){
@@ -89,77 +90,73 @@ function jugar(){
       p.textContent = div[0];
     }
   }
+  */
 }
 
 function contestar() {
   /* Lógica del proceso */
   var selected = false;
   
+  var puntaje = 0;
+  var sumar = 100/(correctas[escogido].length);
+
   let i = 0;
   let max = correctas[escogido].length;
   if (escogido == 1){
     i = max;
     max = i + max;
   }
-  
-  //for (let i=0; i<4; i++){
-  //console.log(`escogido: ${escogido}`);
-  //console.log(`escogido == 1: ${escogido==1}`);
-  //console.log(`i: ${i}`);
-  //console.log(`max: ${max}`);
+
   for (i; i<max; i++){
     var pre = `pregunta-${parseInt(i)+1}`;
     var pregunta = document.getElementById(pre);
     var radios = document.getElementsByName(pre);
-    //console.log(pregunta);
-    //console.log(radios);
+    
+    //console.log(pregunta.textContent);
+    //var div = pregunta.textContent.split("\t");
+    //pregunta.textContent = div[0];
+    //console.log(pregunta.textContent);
+
     for (var r of radios){
-      // Proceso de respuesta del usuario
+      // Proceso de evaluación
       if (r.type === 'radio' && r.checked){
         var buscarCorrecta = `op-${parseInt(i)+1}.${correctas[escogido][parseInt(i)] + 1}`;
-        console.log(escogido);
         if (escogido == 1){
-          console.log("Entró: ")
-          console.log(`i: ${i}`);
-          buscarCorrecta = `op-${parseInt(i)+1}.${correctas[escogido][parseInt(i)-correctas[escogido].length+1]}`;
-          console.log(correctas[escogido]);
-          console.log(correctas[escogido][parseInt(i)-correctas[escogido].length]);
-          console.log(correctas[escogido][parseInt(i)-correctas[escogido].length+1]);
-          console.log(`buscarCorrecta: ${buscarCorrecta}`);
+          buscarCorrecta = `op-${parseInt(i)+1}.${correctas[escogido][parseInt(i)-correctas[escogido].length]+1}`;
         }
-        //var labelCorrecta = document.getElementById(buscarCorrecta);
-        //console.log(labelCorrecta);
-        //labelCorrecta.style.backgroundColor = "green";
-        //labelCorrecta.style.color = "white";
-      }
-    }
-/**/
-/*        var buscarS = `op-${i}.${parseInt(j)-1}`;
-        if(escogido == 1){
-          buscarS = `op-${i}.${parseInt(j)-5}`;
-        }
-        var labelRadio = document.getElementById(buscarS);
-        if (j != correctas[i]){
-          labelRadio.style.backgroundColor = "red";
-          labelRadio.style.color = "yellow";
-          pregunta.append("\t🥺 ❌");
-        } else if (j == correctas[i]){
-          pregunta.append("\t🥰 ✅");
-        }
-        selected = true;*/
-      }
-      //if (radios[j].type === 'radio'){
-      //  radios[j].setAttribute('disabled', 'disabled');
-      //}
-    //}
-    //if (!selected) {
-      //pregunta.append("\t💬 ❌");
-      ////labelCorrecta.style.backgroundColor = "green";
-      ////labelCorrecta.style.color = "white";
-    //}
-    //selected = false;
-        
-    document.getElementById("contestar").style.display = 'none';
-    document.getElementById("reiniciar").style.display = 'flex';
+        var labelCorrecta = document.getElementById(buscarCorrecta);
+        labelCorrecta.style.backgroundColor = "green";
+        labelCorrecta.style.color = "white";
 
+        var buscarSeleccionada = `op-${parseInt(i)+1}.${parseInt(r.value) + 1}`;
+        var labelSeleccionada = document.getElementById(buscarSeleccionada);
+        
+        var comparar = correctas[escogido][i];
+        if (escogido == 1){
+          comparar = correctas[escogido][parseInt(i)-correctas[escogido].length];
+        }
+        if (parseInt(r.value) != comparar){
+          labelSeleccionada.style.backgroundColor = "red";
+          labelSeleccionada.style.color = "yellow";
+          //pregunta.append("\t🥺 ❌");
+        } else if (parseInt(r.value) == comparar){
+          //pregunta.append("\t🥰 ✅");
+          puntaje += sumar;
+        }
+        selected = true;
+      }
+      if (r.type === 'radio'){
+        r.setAttribute('disabled', 'disabled');
+      }
+    if (!selected) {
+      //pregunta.textContent = pregunta.textContent.concat("\t💬 ❌");
+      //labelCorrecta.style.backgroundColor = "green";
+      //labelCorrecta.style.color = "white";
+    }
+    selected = false;
+    }
+  }
+  alert(`\t\tGracias por jugar la Trivia:\n\t\t\t\tTu puntaje es ${puntaje}/100`)
+  document.getElementById("contestar").style.display = 'none';
+  document.getElementById("reiniciar").style.display = 'flex';
 }
