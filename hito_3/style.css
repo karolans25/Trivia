@@ -74,8 +74,6 @@ input[type=button]:hover, input[type=submit]:hover{
   color: beige;
 }
 
-
-
 form{
   position : center;
   width  : 400px;
@@ -96,6 +94,17 @@ div {
   display: block;
 }
 
-div[id=containerTrivia], div[id=reiniciar], div[id=contestar]{
+div[id=containerTrivia], div[id=containerTrivia1], div[id=reiniciar], div[id=contestar], div[id=escoger]{
   display: none;
 }
+
+select {
+  background-color: beige;
+  color: green;
+  font-size: 14px;
+  height: 30px;
+  padding: 5px;
+  width: 150px;
+ 
+}
+
