@@ -62,6 +62,10 @@ let correctas = [[2, 0, 2], [1, 1, 2, 0], [0, 0]];
 
 let nombre = "";
 
+let puntaje = 0;
+
+let maxPuntaje = 100;
+
 function mostrar(n){
   nombre = n;
 }
@@ -81,7 +85,6 @@ function reiniciar(){
 
 function login(){
   reiniciar();
-  console.log("\n\n\n\nREINICIAR:\n");
   document.getElementById("nombreL").value = nombre;
   //Modifica el valor del mensaje de bienvenida
   document.getElementById("bienvenida").innerHTML = "¿Quieres empezar a jugar?";
@@ -188,41 +191,54 @@ function calificar() {
   document.getElementById("reiniciar").style.display = 'flex';
   document.getElementById("contestar").style.display = 'none';
   
-  /**Inicia el proceso cuando se va a calificar */
-  let selected = false;
-  let maxPuntaje = 100;
-  let puntaje = 0;
+  puntaje = 0;
   let sumar = maxPuntaje/(preguntas[escogido].length);
-
-  for (let i in preguntas[escogido]){
-    let pre = `pregunta-${i}`;
-    let pEmoji = document.getElementById(`emoji-${i}`);
-    let radios = document.getElementsByName(pre);
-    for (let j in radios){
-      if (radios[j].type === 'radio' && radios[j].checked){ 
-        let labelRadio = document.getElementById(`op-${i}.${radios[j].value}`);
-        let labelCorrecta = document.getElementById(`op-${i}.${correctas[escogido][i]}`);
-        labelCorrecta.style.backgroundColor = "green";
-        labelCorrecta.style.color = "white";
-
-        if(j != correctas[escogido][i]){
-          labelRadio.style.backgroundColor = "red";
-          labelRadio.style.color = "yellow";
-          pEmoji.innerHTML = "\t🥺 ❌";
-        } else {
-          pEmoji.innerHTML = "\t🥰 ✅";
-          puntaje += sumar;
-        }
-        selected = true;
-      }
-      if (radios[j].type === 'radio'){
-        radios[j].setAttribute("disabled", "disabled");
-      }
-    }
-    if (!selected) {
-      pEmoji.innerHTML = "\t💬 ❌";
-    }
-    selected = false;
+  /**Inicia el proceso cuando se va a calificar */
+  let total = preguntas[escogido].length;
+  let contador = 0;
+  
+  while (contador < total){
+    evaluar(contador, sumar);
+    contador ++;
   }
+
   alert(`\t\t Gracias por participar!\n\n\t\t\t\tTu puntaje fue de ${puntaje.toFixed(2)}/${maxPuntaje.toFixed(2)}`);
+}
+
+function evaluar(contador, sumar){
+  let selected = false;
+  let items = document.getElementById(`flex-${contador}`);
+  let radios = items.getElementsByTagName("input");
+  let labels = items.getElementsByTagName("label");
+  let ps = items.getElementsByTagName("p");
+  let pEmoji = "";
+  for (let i of ps){
+    if (i.id.startsWith("emoji-")){
+      pEmoji = i;
+    }
+  }
+  for (let j in radios){
+    if (radios[j].type === 'radio' && radios[j].checked){ 
+      labels[j].style.backgroundColor = "red";
+      labels[j].style.color = "yellow";
+
+      labels[correctas[escogido][contador]].style.backgroundColor = "green";
+      labels[correctas[escogido][contador]].style.color = "white";
+
+      if(j != correctas[escogido][contador]){
+        pEmoji.innerHTML = "\t🥺 ❌";
+      } else {
+        pEmoji.innerHTML = "\t🥰 ✅";
+        puntaje += sumar;
+      }
+      selected = true;
+    }
+    if (radios[j].type === 'radio'){
+      radios[j].setAttribute("disabled", "disabled");
+    }
+  }
+  if (!selected) {
+    pEmoji.innerHTML = "\t💬 ❌";
+  }
+
 }
