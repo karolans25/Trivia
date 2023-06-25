@@ -37,7 +37,7 @@ input[type=button], input[type=submit]{
 
 .flex-item {
   background-color: var(--color-bg);
-  width: 30%;
+  width: 45%;
   margin: 2%;
   text-align: center;
   line-height: 5px;

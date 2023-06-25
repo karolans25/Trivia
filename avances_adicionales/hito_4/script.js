@@ -6,20 +6,21 @@
 // Use your menus or right-click / control-click and choose "Inspect" > "Console"
 // console.log("Hello 🌎");
 
-let tipos = ["Comidas", "Bebidas"];
+let tipos = ["Comidas", "Bebidas", "Dulces"];
 
 let escogido = 0;
 
 let preguntas = [ ["1. ¿Cuáles son dulces típicos de México?",
                    "2. ¿Cuáles son dulces típicos de Colombia?",
                    "3. ¿Cuáles son comidas típicas de Colombia?"
-                   //,
-                   //"4. ¿Cuáles son comidas típicas de México?"
                   ],
                   ["1. ¿Cuáles son bebidas frías típicas de México?",
                    "2. ¿Cuáles son bebidas frías típicas de Colombia?",
                    "3. ¿Cuáles son bebidas calientes típicas de Colombia?",
                    "4. ¿Cuáles son bebidas calientes típicas de México?"
+                  ],
+                  ["1. ¿Cuáles son bebidas frías típicas de México?",
+                   "2. ¿Cuáles son bebidas frías típicas de Colombia?"
                   ]
                 ];
 
@@ -32,10 +33,6 @@ let opciones = [  [ ["Suspiro, turrón, alfajor",
                     ["Bratwurst, pretzel, schnitzel", 
                      "Tacos, mole, chilaquiles", 
                      "Bandeja paisa, ajiaco, mote de queso"]
-                     //,
-                    //["Asado, locro, empanadas", 
-                    // "Pozole, cochinita pibil, tlayuda", 
-                    // "Mandioca, chipa, araticú"]
                   ],
                   [ ["Guaraná, jugo de caña, pulque",
                      "Pozol, pulque, tepache",
@@ -49,11 +46,19 @@ let opciones = [  [ ["Suspiro, turrón, alfajor",
                     ["Los a y los b",
                      "Los c y los d",
                      "Los e y los f"]
+                  ],
+                  [ ["Guaraná, jugo de caña, pulque",
+                     "Pozol, pulque, tepache",
+                     "Los e y los f"],
+                    ["Limoncello, sambuca, fernet",
+                     "Lulada, campús, jugo de borojó",
+                     "Trascalate, cebadina, tejuino"]
                   ]
                 ];
 
 //let correctas = [[2, 0, 2, 1], [1, 1, 2, 0]];
-let correctas = [[2, 0, 2], [1, 1, 2, 0]];
+//let correctas = [[2, 0, 2], [1, 1, 2, 0]];
+let correctas = [[2, 0, 2], [1, 1, 2, 0], [0, 0]];
 
 let nombre = "";
 
@@ -110,6 +115,7 @@ function seleccionar(){
     op.appendChild(opText);
     select.append(op);
   }
+  divSelector.style.width = "60%";
   divSelector.appendChild(select);
 
   //Crea el botón de seleccionar el tipo de preguntas
@@ -138,26 +144,12 @@ function onLoad(){
   let containerTrivia = document.getElementById("containerTrivia");
   containerTrivia.style.display = 'flex';
   //Crea el banco de preguntas 
-/*
-  let qs = document.getElementsByClassName("flex-item");
-  let contador = 0;
-  for (const element of qs){
-    if(element.id.startsWith("flex-")){
-      contador ++;
-      element.remove();
-    }
-  }
-  console.log(contador);
-*/
   let trivia = document.createElement("div");
   trivia.className = "flex-container";
   trivia.id = "trivia";
   containerTrivia.appendChild(trivia);
 
   for (let i in preguntas[escogido]){
-    //if (document.getElementById(`flex-${i}`)){
-    //  document.getElementById(`flex-${i}`).remove();
-    //}
     let div = document.createElement("div");
     div.className = "flex-item";
     div.id = `flex-${i}`;
