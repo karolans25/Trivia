@@ -8,8 +8,6 @@
 
 let tipos = ["Comidas", "Bebidas", "Dulces"];
 
-let escogido = 0;
-
 let preguntas = [ ["1. ¿Cuáles son dulces típicos de México?",
                    "2. ¿Cuáles son dulces típicos de Colombia?",
                    "3. ¿Cuáles son comidas típicas de Colombia?"
@@ -59,6 +57,8 @@ let opciones = [  [ ["Suspiro, turrón, alfajor",
 //let correctas = [[2, 0, 2, 1], [1, 1, 2, 0]];
 //let correctas = [[2, 0, 2], [1, 1, 2, 0]];
 let correctas = [[2, 0, 2], [1, 1, 2, 0], [0, 0]];
+
+let escogido = 0;
 
 let nombre = "";
 
