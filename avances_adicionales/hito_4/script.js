@@ -12,8 +12,9 @@ let escogido = 0;
 
 let preguntas = [ ["1. ¿Cuáles son dulces típicos de México?",
                    "2. ¿Cuáles son dulces típicos de Colombia?",
-                   "3. ¿Cuáles son comidas típicas de Colombia?",
-                   "4. ¿Cuáles son comidas típicas de México?"
+                   "3. ¿Cuáles son comidas típicas de Colombia?"
+                   //,
+                   //"4. ¿Cuáles son comidas típicas de México?"
                   ],
                   ["1. ¿Cuáles son bebidas frías típicas de México?",
                    "2. ¿Cuáles son bebidas frías típicas de Colombia?",
@@ -30,10 +31,11 @@ let opciones = [  [ ["Suspiro, turrón, alfajor",
                      "Muéganos, ate, palanquetas, camotes"],
                     ["Bratwurst, pretzel, schnitzel", 
                      "Tacos, mole, chilaquiles", 
-                     "Bandeja paisa, ajiaco, mote de queso"],
-                    ["Asado, locro, empanadas", 
-                     "Pozole, cochinita pibil, tlayuda", 
-                     "Mandioca, chipa, araticú"]
+                     "Bandeja paisa, ajiaco, mote de queso"]
+                     //,
+                    //["Asado, locro, empanadas", 
+                    // "Pozole, cochinita pibil, tlayuda", 
+                    // "Mandioca, chipa, araticú"]
                   ],
                   [ ["Guaraná, jugo de caña, pulque",
                      "Pozol, pulque, tepache",
@@ -50,7 +52,8 @@ let opciones = [  [ ["Suspiro, turrón, alfajor",
                   ]
                 ];
 
-let correctas = [[2, 0, 2, 1], [1, 1, 2, 0]];
+//let correctas = [[2, 0, 2, 1], [1, 1, 2, 0]];
+let correctas = [[2, 0, 2], [1, 1, 2, 0]];
 
 let nombre = "";
 
@@ -73,6 +76,7 @@ function reiniciar(){
 
 function login(){
   reiniciar();
+  console.log("\n\n\n\nREINICIAR:\n");
   document.getElementById("nombreL").value = nombre;
   //Modifica el valor del mensaje de bienvenida
   document.getElementById("bienvenida").innerHTML = "¿Quieres empezar a jugar?";
@@ -92,6 +96,9 @@ function seleccionar(){
   }
   if (document.getElementById("buttonT")){
     document.getElementById("buttonT").remove();
+  }
+  if (document.getElementById("trivia")){
+    document.getElementById("trivia").remove();
   }
   let divSelector = document.getElementById("divSelector");
   let select = document.createElement("select");
@@ -128,13 +135,29 @@ function jugar(){
 }
 
 function onLoad(){
-  let trivia = document.getElementById("containerTrivia");
-  trivia.style.display = 'flex';
+  let containerTrivia = document.getElementById("containerTrivia");
+  containerTrivia.style.display = 'flex';
   //Crea el banco de preguntas 
-  for (let i in preguntas[escogido]){
-    if (document.getElementById(`flex-${i}`)){
-      document.getElementById(`flex-${i}`).remove();
+/*
+  let qs = document.getElementsByClassName("flex-item");
+  let contador = 0;
+  for (const element of qs){
+    if(element.id.startsWith("flex-")){
+      contador ++;
+      element.remove();
     }
+  }
+  console.log(contador);
+*/
+  let trivia = document.createElement("div");
+  trivia.className = "flex-container";
+  trivia.id = "trivia";
+  containerTrivia.appendChild(trivia);
+
+  for (let i in preguntas[escogido]){
+    //if (document.getElementById(`flex-${i}`)){
+    //  document.getElementById(`flex-${i}`).remove();
+    //}
     let div = document.createElement("div");
     div.className = "flex-item";
     div.id = `flex-${i}`;
@@ -175,8 +198,9 @@ function calificar() {
   
   /**Inicia el proceso cuando se va a calificar */
   let selected = false;
+  let maxPuntaje = 100;
   let puntaje = 0;
-  let sumar = 100/(preguntas[escogido].length);
+  let sumar = maxPuntaje/(preguntas[escogido].length);
 
   for (let i in preguntas[escogido]){
     let pre = `pregunta-${i}`;
@@ -208,5 +232,5 @@ function calificar() {
     }
     selected = false;
   }
-  alert(`\t\t Gracias por participar!\n\n\t\t\t\tTu puntaje fue de ${puntaje}/100`);
+  alert(`\t\t Gracias por participar!\n\n\t\t\t\tTu puntaje fue de ${puntaje.toFixed(2)}/${maxPuntaje.toFixed(2)}`);
 }
