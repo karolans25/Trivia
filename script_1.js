@@ -4,7 +4,7 @@
 
 // Print a message in the browser's dev tools console each time the page loads
 // Use your menus or right-click / control-click and choose "Inspect" > "Console"
-// console.log("Hello 🌎");
+console.log("Hello 🌎");
 
 let tipos = ["Comidas", "Bebidas"];
 
@@ -59,40 +59,41 @@ function mostrar(n){
 }
 
 function reiniciar(){
-//Esconde los div y container
+  //Esconde los div y container
   document.getElementById("containerTrivia").style.display = 'none';
   document.getElementById("contestar").style.display = 'none';
   document.getElementById("reiniciar").style.display = 'none';
   document.getElementById("escoger").style.display = 'none';
   //Muestra los div y container de esta vista
-  document.getElementById("login").style.display = 'flex';
+  document.getElementById("containerLogin").style.display = 'flex';
   document.getElementById("bienvenida").style.display = 'flex';
-  //Pone por defecto el valor del input text
-  document.getElementById("nombreL").value = "";
-}
-
-function login(){
-  reiniciar();
-  document.getElementById("nombreL").value = nombre;
   //Modifica el valor del mensaje de bienvenida
   document.getElementById("bienvenida").innerHTML = "¿Quieres empezar a jugar?";
-  alert ("Hola " + nombre);
-  seleccionar();
-}
-
-function seleccionar(){
-  //Muestra y esconde los div de la vista
-  document.getElementById("login").style.display = 'none';
-  document.getElementById("escoger").style.display = 'flex';
-  //Cambia el mensaje de la vista
-  document.getElementById("bienvenida").innerHTML = "Escoge el tema de las preguntas";
-  //Crea y agrega un selector con las opciones de los tipos de preguntas
   if (document.getElementById("selectorT")){
     document.getElementById("selectorT").remove();
   }
   if (document.getElementById("buttonT")){
     document.getElementById("buttonT").remove();
   }
+  //Pone por defecto el valor del input text
+  //document.getElementById("nombreL").value = "";
+}
+
+function login(){
+  reiniciar();
+  document.getElementById("nombreLogin").value = nombre;
+  alert ("Hola " + nombre);
+  seleccionar();
+}
+
+function seleccionar(){
+  //Muestra y esconde los div de la vista
+  document.getElementById("containerLogin").style.display = 'none';
+  document.getElementById("escoger").style.display = 'flex';
+  //Cambia el mensaje de la vista
+  document.getElementById("bienvenida").innerHTML = "Escoge el tema de las preguntas";
+
+  //Crea y agrega un selector con las opciones de los tipos de preguntas
   let divSelector = document.getElementById("divSelector");
   let select = document.createElement("select");
   select.setAttribute("id", "selectorT");
@@ -122,32 +123,21 @@ function jugar(){
 
   //Organiza la vista del juego (visibilidad de elementos)
   document.getElementById("escoger").style.display = 'none';
-  document.getElementById("containerTrivia").style.display = 'flex';
   document.getElementById("contestar").style.display = 'flex';
-  onLoad();
-}
-
-function onLoad(){
   let trivia = document.getElementById("containerTrivia");
   trivia.style.display = 'flex';
-  //Crea el banco de preguntas 
-  for (let i in preguntas[escogido]){
-    if (document.getElementById(`flex-${i}`)){
-      document.getElementById(`flex-${i}`).remove();
-    }
+  //Crea el banco de preguntas
+  let preg = preguntas[escogido];
+  for (let i in preg){
     let div = document.createElement("div");
     div.className = "flex-item";
     div.id = `flex-${i}`;
+    //div.setAttribute("name", `flex-${i}`);
     trivia.appendChild(div);
     let p = document.createElement("p");
-    p.id = `pregunta-${i}`;
-    p.innerHTML = preguntas[escogido][i];
+    p.id = `pregunta-${parseInt(i)}`;
+    p.innerHTML = preg[i];
     div.append(p);
-    div.append(document.createElement("br"));
-    let pEmoji = document.createElement("p");
-    pEmoji.id = `emoji-${i}`;
-    pEmoji.innerHTML = "";
-    div.append(pEmoji);
     div.append(document.createElement("br"));
     let ops = opciones[escogido][i];
     for (let j in ops){
@@ -168,45 +158,80 @@ function onLoad(){
   }
 }
 
-function calificar() {
+function evaluarRespuestas() {
   //Esconde el botón de contestar y muestra el de reiniciar
   document.getElementById("reiniciar").style.display = 'flex';
   document.getElementById("contestar").style.display = 'none';
   
   /**Inicia el proceso cuando se va a calificar */
   let selected = false;
-  let puntaje = 0;
-  let sumar = 100/(preguntas[escogido].length);
+  let puntaje = 100;
 
   for (let i in preguntas[escogido]){
-    let pre = `pregunta-${i}`;
-    let pEmoji = document.getElementById(`emoji-${i}`);
-    let radios = document.getElementsByName(pre);
-    for (let j in radios){
-      if (radios[j].type === 'radio' && radios[j].checked){ 
-        let labelRadio = document.getElementById(`op-${i}.${radios[j].value}`);
-        let labelCorrecta = document.getElementById(`op-${i}.${correctas[escogido][i]}`);
-        labelCorrecta.style.backgroundColor = "green";
-        labelCorrecta.style.color = "white";
-
-        if(j != correctas[escogido][i]){
-          labelRadio.style.backgroundColor = "red";
-          labelRadio.style.color = "yellow";
-          pEmoji.innerHTML = "\t🥺 ❌";
-        } else {
-          pEmoji.innerHTML = "\t🥰 ✅";
-          puntaje += sumar;
+    let p = `pregunta-${i}`;
+    let radios = document.getElementsByName(p);
+    let flex = document.getElementById(`flex-${i}`);
+    for (let r in radios){
+      if (radios[r].type === 'radio' && radios[r].checked){
+        console.log(`op-${i}.${r}`);
+        let seleccionada = flex.getElementById(`op-${i}.${r}`);
+        let correcta = flex.getElementById(`op-${i}.${radios[correctas[escogido][i]].id}`);
+        //console.log(correcta);
+        correcta.style.backgroundColor = "green";
+        correcta.style.color = "white";
+        if (correcta.id != seleccionada.id){
+          seleccionada.style.backgroundColor = "red";
+          seleccionada.style.color = "yellow";
         }
+        //  pEmoji.append("\t🥺 ❌");
+        //  puntaje -= (100/lasPreguntas.length);
+        //  pEmoji.append("\t🥰 ✅");
         selected = true;
       }
-      if (radios[j].type === 'radio'){
-        radios[j].setAttribute("disabled", "disabled");
-      }
+      radios[r].setAttribute("disabled", "disabled");
     }
     if (!selected) {
-      pEmoji.innerHTML = "\t💬 ❌";
+      //pEmoji.append("\t💬 ❌");
+      //puntaje -= (100/lasPreguntas.length);
     }
     selected = false;
   }
   alert(`\t\t Gracias por participar!\n\n\t\t\t\tTu puntaje fue de ${puntaje}/100`);
+  /*
+  for (var respuesta of respuestas){
+    output += "Respuesta a la pregunta " + respuesta[0] + ":\n\t" + respuesta[1] + "\n\n";
+  }
+  alert(output); 
+  */
+
 }
+
+
+/* 
+Make the "Click me!" button move when the visitor clicks it:
+- First add the button to the page by following the steps in the TODO 🚧
+*/
+/*
+const btn = document.querySelector("button"); // Get the button from the page
+if (btn) { // Detect clicks on the button
+  btn.onclick = function () {
+    // The 'dipped' class in style.css changes the appearance on click
+    btn.classList.toggle("dipped");
+  };
+}
+
+// ----- GLITCH STARTER PROJECT HELPER CODE -----
+
+// Open file when the link in the preview is clicked
+let goto = (file, line) => {
+  window.parent.postMessage(
+    { type: "glitch/go-to-line", payload: { filePath: file, line: line } }, "*"
+  );
+};
+// Get the file opening button from its class name
+const filer = document.querySelectorAll(".fileopener");
+filer.forEach((f) => {
+  f.onclick = () => { goto(f.dataset.file, f.dataset.line); };
+});
+
+*/
