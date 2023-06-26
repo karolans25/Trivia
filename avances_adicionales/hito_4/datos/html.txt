@@ -1,0 +1,299 @@
+<strong>1) ¿Qué es HTML?</strong>
+<p></p>
+<p></p>
+<p>HTML es la abreviatura de HyperText Markup Language: es el lenguaje de la World Wide Web. Es un lenguaje de formato de texto estándar usado para crear y mostrar páginas en la Web. Los documentos HTML están compuestos de dos cosas: contenido y &nbsp;etiquetas que le dan formato para que se muestre correctamente en las páginas. </p>
+
+<strong>2) ¿Qué son las etiquetas?</strong>
+<p></p>
+<p></p>
+<p>Es el contenido que se coloca entre las etiquetas HTML, con la finalidad de darle formato correctamente. Usa el símbolo menor que (&lt;) y el mayor que (&gt;). Un símbolo de barra oblicua también se utiliza como etiqueta de cierre <strong>Ejemplo:</strong>&lt;strong&gt;sample&lt;/strong&gt;</p>
+
+<strong>3) ¿Todas las etiquetas HTML vienen en pares?</strong>
+<p>No, algunas etiquetas HTML simples, &nbsp;no necesitan una etiqueta de cierre. Algunos ejemplos son las etiquetas &lt;img&gt; y &lt;br&gt;. </p>
+<p></p>
+<p></p>
+
+<strong>4) ¿Cuáles son algunas de las listas comunes que se pueden utilizar al diseñar una página?</strong>
+<p></p>
+<p>Se puede insertar cualquiera o una combinación de los siguientes tipos de lista:<br>- &nbsp;clasificada<br>- &nbsp;no ordenada<br>- de definiciones<br>- &nbsp;de menú<br>- &nbsp;de directorio<br>Estos tipos de lista, cada uno usa un conjunto de etiquetas distintas para componer</p>
+<p></p>
+
+<strong>5) ¿Cómo se inserta un comentario en HTML?</strong>
+<p>Los comentarios en HTML empiezan con "&lt;!-" y terminan con "-&gt;".<strong>Ejemplo</strong>:&lt;!-- A SAMPLE COMMENT --&gt;</p>
+<p></p>
+<p></p>
+
+<strong>6) ¿Todas las entidades de caracteres se muestran correctamente en todos los sistemas?</strong>
+<p></p>
+<p></p>
+<p>No, &nbsp;algunas entidades de caracteres no se pueden mostrar, cuando el sistema operativo en el que se ejecuta el navegador no admite los caracteres. Cuando sucede esto, los caracteres se presentan como cuadros.</p>
+
+<strong>7) ¿Qué es un mapa de imagen?</strong>
+<p></p>
+<p></p>
+<p>El mapa de imágenes permite enlazar muchas páginas web distintas, usando una sola imagen. También, puede definir formas en las imágenes que desea que formen parte de un mapeo de imágenes. </p>
+
+<strong>8) ¿Cuál es la ventaja de colapsar el espacio en blanco?</strong>
+<p></p>
+<p>Son una secuencia en blanco de caracteres de espacio, que se trata como un carácter de espacio único en HTML. Motivado a que el navegador colapsa múltiples espacios en un solo espacio, puede sangrar líneas de texto sin preocuparse por los muchos espacios. Esto permite organizar el código HTML en un formato &nbsp;más legible.</p>
+<p></p>
+
+<strong>9) ¿Se pueden establecer valores de atributo para cualquier cosa o hay valores específicos que ellos aceptan?</strong>
+<p>Algunos valores de atributo sólo &nbsp;pueden establecerse en valores predefinidos. Otros atributos aceptan cualquier valor numérico, que represente el número de píxeles de un tamaño.</p>
+<p></p>
+<p></p>
+
+<strong>10) ¿Cómo se inserta un símbolo de copyright en una página del navegador?</strong>
+<p>Para insertar el símbolo de copyright, se tiene que escribir &amp;copy; o &amp; #169; en&nbsp; un archivo HTML.</p>
+<p></p>
+<p></p>
+
+<strong>11) ¿Cómo se crean enlaces a secciones dentro de la misma página?</strong>
+<p></p>
+<p>Los enlaces se crean usando la etiqueta &lt;a&gt;, con referencia mediante el uso del símbolo del número (#). <strong>Ejemplo</strong>: puede tener una línea como &lt;a href="#Los mejores"&gt;Volver a la parte superior &lt;/a&gt;, lo que da lugar a la aparición de las palabras 'Volver a la parte superior' en la página web y enlaces a un marcador llamado 'Los mejores'. A continuación, se escribe un comando de etiqueta separado como &lt;a name="Los mejores"&gt; en algún lugar en la parte superior de la misma página web para que el usuario esté vinculado a ese punto cuando haga clic en 'Volver a la parte superior'. </p>
+<p></p>
+
+<strong>12) ¿Hay alguna manera de mantener los elementos de la lista directamente en un archivo HTML?</strong>
+<p></p>
+<p></p>
+<p>Se puede hacer usando sangrías para mantener los elementos de lista rectos. Si se usa sangria cada lista subanunciada más allá de la lista matriz que la contiene puedes determinar de un simple vistazo las diferentes listas y los elementos que contiene.</p>
+
+<strong>13) Si ves una dirección web en una revista, ¿a qué página web apunta?</strong>
+<p></p>
+<p>Cada página web en la web puede tener una dirección web por separado. Casi todas estas direcciones son relativas a la página web de mayor importancia. La dirección web publicada en las revistas normalmente apunta a la más importante. Desde esta página, puede entrar a las demás páginas del sitio web.</p>
+<p></p>
+
+<strong>14) ¿Cuál es el uso del texto alternativo en el mapeo de imágenes?</strong>
+<p></p>
+<p></p>
+<p>Se usa el texto alternativo, cuando se utilizan mapas de imágenes para poder poner un texto descriptivo en cada enlace de zona activa. </p>
+
+<strong>15) ¿Funcionan los archivos HTML más antiguos en los navegadores más nuevos?</strong>
+<p></p>
+<p>Sí, los archivos HTML antiguos son compatibles con el estándar HTML, y puede ser posible que algunas funciones no funcionen.</p>
+<p></p>
+
+<strong>16) ¿Un hipervínculo se aplica sólo al texto?</strong>
+<p>No, los hipervínculos se pueden usar en el texto y en las imágenes. Lo que indica &nbsp;que puede convertir una imagen en un enlace, que permita a los usuarios enlazar a otra página al hacer clic. Rodee la imagen dentro de las combinaciones de etiquetas &lt;a href=" "&gt;...&lt;/a&gt;.</p>
+<p></p>
+<p></p>
+
+<strong>17) Si el sistema operativo del usuario no soporta el carácter necesario, ¿cómo se puede representar el símbolo?</strong>
+<p></p>
+<p>Se puede mostrar como una imagen.</p>
+<p></p>
+
+<strong>18) ¿Cómo se cambia el tipo de número en el medio de una lista?</strong>
+<p>El atributo type puede usarse para cambiar el tipo de numeración de cualquier elemento de la lista. El atributo de valor puede cambiar el índice numérico<strong>.</strong></p>
+<p></p>
+<p></p>
+
+<strong>19) ¿Qué son las hojas de estilo?</strong>
+<p>Las hojas de estilo: son las que permiten crear plantillas de estilo consistentes, transportables y definidas. Estas plantillas se vinculan a varias páginas web distintas, que facilita el mantenimiento y cambio de aspecto de las páginas web dentro del sitio. </p>
+<p></p>
+<p></p>
+
+<strong>20) Indique los tipos de viñetas disponibles en HTML </strong>
+<p></p>
+<p>Con las listas ordenadas, puedes utilizar distintas viñetas, incluyendo números alfabéticos y romanos. El atributo de tipo para listas desordenadas&nbsp; puede ser cuadrado, disco o círculo.<strong>&nbsp;</strong></p>
+<p></p>
+
+<strong>21) ¿Cómo se crea un texto multicolor en una página web?</strong>
+<p></p>
+<p></p>
+<p>Para crear texto con muchos colores, usa &nbsp;etiquetas &lt;font color="color"&gt;...&lt;/font&gt; para cada carácter que desee aplicar color. Puede usar la combinación de etiquetas tantas veces como se necesite, rodeando un solo carácter o una palabra entera. </p>
+
+<strong>22) ¿Por qué hay valores de entidades de caracteres numéricos y de caracteres con nombre?</strong>
+<p></p>
+<p>Los valores numéricos se toman de los valores ASCII de los diferentes caracteres, pero a veces son difíciles de recordar. Motivado a esto, se crearon valores de entidades de caracteres con nombre que facilitan a los diseñadores de páginas web su uso. </p>
+<p></p>
+
+<strong>23) Escriba una secuencia de etiquetas de tabla HTML que produzca lo siguiente:<br>50 unidades 100 500<br>10 unidades 5 50<br></strong>
+<p></p>
+<p></p>
+<p>&lt;table&gt; <br>&lt;tr&gt; <br>&lt;td&gt;50 pcs&lt;/td&gt; <br>&lt;td&gt; <br>100&lt;/td&gt; <br>&lt;td&gt;500&lt;/td&gt; <br>&lt;/tr&gt; <br>&lt;tr&gt; <br>&lt;td&gt;10 pcs&lt;/td&gt; <br>&lt;td&gt;5&lt;/td&gt; <br>&lt;td&gt;50&lt;/td&gt; <br>&lt;/tr&gt; <br>&lt;/table&gt; <br></p>
+
+<strong>24) ¿Cuál es la ventaja de agrupar varias casillas de verificación?</strong>
+<p></p>
+<p>Agruparlas ayuda a organizarlas. Los botones de la casilla de verificación pueden tener su nombre y no es necesario que pertenezcan a un grupo. Una sola página web puede tener muchos grupos, distintos de casillas de verificación.</p>
+<p></p>
+
+<strong>25) ¿Qué sucederá si se superponen conjuntos de etiquetas?</strong>
+<p>Sólo puede ser reconocida la primera etiqueta. Este problema lo vas a encontrar cuando el texto no se muestre correctamente en la pantalla del navegador.</p>
+<p></p>
+<p></p>
+
+<strong>26) ¿Qué son los applets?</strong>
+<p>Los applets son programas pequeños que pueden incrustarse en las páginas web para realizar alguna función específica como animaciones, cálculos y procesamiento de información. Los applets están escritos en lenguaje Java.</p>
+<p></p>
+<p></p>
+
+<strong>27) ¿Qué pasa si no hay texto entre las etiquetas o si un texto fue omitido por error? ¿Afectará la visualización del archivo HTML?</strong>
+<p></p>
+<p>Si no hay texto entre las etiquetas, tampoco hay nada que darle formato. Por lo que, no aparecerá ningún formato. Algunas etiquetas, como una etiqueta de cierre como la etiqueta &lt;img&gt; no necesitan texto entre ellas.</p>
+<p></p>
+
+<strong>28) ¿Es posible establecer colores específicos para los bordes de las tablas?</strong>
+<p></p>
+<p></p>
+<p>Si, usando hojas de estilo pero los colores en una tabla que no usen hojas de estilo serán los mismos que los del color del texto.</p>
+
+<strong>29) ¿Cómo se crea un enlace que se conectará a otra página web cuando se hace clic en él?</strong>
+<p>Utilice la etiqueta href. El formato general para esto es: &lt;a href="sitio"&gt;texto&lt;/a&gt; reemplazando "sitio" con la URL real de la página, a la que se supone que está vinculado cuando se hace clic en el texto.</p>
+<p></p>
+<p></p>
+
+<strong>30) ¿Qué otras formas se pueden utilizar para alinear las imágenes y envolver el texto?</strong>
+<p></p>
+<p>Una forma útil de envolver el texto alrededor de una imagen es usar hojas de estilo o tablas. </p>
+<p></p>
+
+<strong>31) ¿Un solo enlace de texto puede apuntar a dos páginas web diferentes?</strong>
+<p>No. La etiqueta &lt;a&gt; sólo acepta un único atributo href, y apuntar a una sola página web.</p>
+<p></p>
+<p></p>
+
+<strong>32) ¿Cuál es la diferencia entre las listas de directorios y menús y las listas desordenadas?</strong>
+<p></p>
+<p></p>
+<p>La diferencia es que el directorio y las listas de menús no incluyen atributos que permita cambiar el estilo de la viñeta.</p>
+
+<strong>33) ¿Se puede cambiar el color de las viñetas?</strong>
+<p></p>
+<p></p>
+<p>El color de viñeta es el mismo que el del primer carácter del elemento de la lista. Si rodea el &lt;li&gt; y el primer carácter con un grupo de etiquetas &lt;font&gt; con el conjunto de atributos de color, el color de &nbsp;viñeta y el primer carácter, serán de&nbsp; color distinto al del texto.</p>
+
+<strong>34) ¿Cuáles son los límites del tamaño del campo de texto?</strong>
+<p></p>
+<p>El tamaño de un campo de texto predeterminado es de unos 13 caracteres. Sin embargo, si incluye el atributo size se puede establecer que el valor del tamaño sea tan bajo como 1. El valor del tamaño máximo esta determinado por el ancho del navegador. Si el atributo size se establece en 0, el tamaño se establecerá en el tamaño de 13 caracteres.</p>
+<p></p>
+
+<strong>35) ¿Las etiquetas &lt;th&gt; siempre tienen que ir al principio de una fila o columna?</strong>
+<p>Toda etiqueta &lt;tr&gt; se puede cambiar por una etiqueta &lt;th&gt;. Esto hace que el texto que está en la etiqueta &lt;th&gt; se muestre en negrita en el navegador. Aunque las etiquetas &lt;th&gt; se usan principalmente para los headings, no es necesario usarlas solo para ellos.</p>
+<p></p>
+<p></p>
+
+<strong>36) ¿Cuál es la relación entre los atributos 'border' y 'rule'?</strong>
+<p></p>
+<p></p>
+<p>Los bordes de celda tienen predeterminados un grosor de 1 píxel, los cuales se añaden en forma automática entre celdas si el atributo 'border' se establece en un valor diferente de cero. De igual manera, si el atributo border no se incluye, aparece un borde predeterminado de 1 píxel, si el atributo rules se adhiere a la etiqueta &lt;table&gt;.</p>
+
+<strong>37) ¿Qué es un 'marquee'?</strong>
+<p></p>
+<p>Una Marquee te permite poner &nbsp;un texto de desplazamiento en una página web. Para ello, &nbsp;se coloca cualquier texto que desees que aparezca desplazándose dentro de las etiquetas &lt;marquee&gt; y &lt;/marquee&gt;.</p>
+<p></p>
+
+<strong>38) ¿Cómo se crea un texto en una página web que le permitirá enviar un correo electrónico al hacer clic?</strong>
+<p></p>
+<p>Utilizando el comando mailto dentro de la etiqueta href. <strong>Ejemplo:</strong>&lt;a href=”mailto:youremailaddress”&gt;text to be clicked&lt;/a&gt;</p>
+<p></p>
+
+<strong>39) ¿Son las etiquetas &lt;br&gt; la única manera de separar secciones de texto?</strong>
+<p>No. La etiqueta &lt;br&gt; es una manera de separar líneas de texto. Hay otras etiquetas, como &lt;p&gt; y &lt;blockquote&gt;, que &nbsp;también sirven para separar secciones de texto.</p>
+<p></p>
+<p></p>
+
+<strong>40) ¿Hay casos en los que el texto aparecerá fuera del navegador?</strong>
+<p></p>
+<p>Si el texto forma parte de una celda de tabla con un ancho definido, el texto puede extenderse más allá de la ventana del navegador.</p>
+<p></p>
+
+<strong>41) ¿En qué se diferencian los enlaces activos de los enlaces normales?</strong>
+<p></p>
+<p></p>
+<p>El color para los enlaces normales y activos es el azul. Varios navegadores reconocen un enlace activo, cuando el cursor del ratón se coloca sobre ese enlace. Se consideran normales aquellos que no tienen un cursor de ratón sobre ese enlace.</p>
+
+<strong>42) ¿Limitan las hojas de estilo el número de nuevas definiciones de estilo que se pueden incluir entre paréntesis?</strong>
+<p></p>
+<p>Las hojas de estilo no limitan el número de definiciones de estilo que pueden ser incluidas entre paréntesis para un selector determinado.</p>
+<p></p>
+
+<strong>43) ¿Puedo especificar valores fraccionarios como 670 o 973 para el grosor de la fuente (font-weight)?</strong>
+<p>Eso depende del navegador, pero el estándar no soporta valores de peso fraccionarios. Los valores para ser aceptados deben terminar con dos ceros.</p>
+<p></p>
+<p></p>
+
+<strong>44) ¿Cuál es la jerarquía que se sigue cuando se trata de hojas de estilo?</strong>
+<p>La definición más cercana a la etiqueta real tiene prioridad. El estilo en línea tiene prioridad sobre hojas de estilo incrustadas que tienen prioridad sobre hojas de estilo externas.</p>
+<p></p>
+<p></p>
+
+<strong>45) ¿Pueden agruparse varios selectores con nombres de clase?</strong>
+<p></p>
+<p>Se puede definir varios selectores con la misma definición de estilo haciendo la separación con comas. Esta técnica también puede funcionar para selectores con nombres de clase.</p>
+<p></p>
+
+<strong>46) ¿Qué sucede si se abre el archivo CSS externo en un navegador?</strong>
+<p></p>
+<p></p>
+<p>La única forma de usar un archivo CSS externo es haciendo referencia a él utilizando &lt;link/&gt; tag dentro de otro documento HTML. Esto es porque cuando se intenta abrir el archivo CSS externo en un navegador, el navegador no lo puede abrir porque el archivo tiene una extensión distinta.</p>
+
+<strong>47) ¿Cómo se convierte una imagen en una imagen de fondo de una página web?</strong>
+<p></p>
+<p>Utilizando un código de etiqueta después de la etiqueta &lt;/head&gt; como se indica: &lt;body background = "image.gif"&gt; . Reemplace image.gif con el nombre de su archivo de imagen. Esto toma la foto y la convierte en la imagen de fondo de su página web.</p>
+<p></p>
+
+<strong>48) ¿Qué sucede si la propiedad tipo lista se utiliza en un elemento no listado como un párrafo?</strong>
+<p>La propiedad va a ser &nbsp;ignorada y no afectará al párrafo.</p>
+<p></p>
+<p></p>
+
+<strong>49) ¿Cuándo es apropiado usar frames?</strong>
+<p></p>
+<p></p>
+<p>Los frames (marcos) hacen que la navegación por un sitio sea más fácil. Si los enlaces principales hacia el sitio están en un frame que aparece en la parte superior o a lo largo del borde del navegador el contenido de los enlaces se muestra en el resto de la ventana del navegador.</p>
+
+<strong>50) ¿Qué sucede si el número de valores en las filas o el atributo cols no suma el 100 por ciento?</strong>
+<p></p>
+<p>El navegador calcula el tamaño de los marcos en relación con la suma total de los valores. Si el atributo cols se establece en 100%, 200% &nbsp;y tienen menos del 100%, no va a mostrar los dos marcos verticales.</p>
+<p></p>
+
+<strong>51) ¿Qué navegadores soportan HTML5?</strong>
+<p></p>
+<p>Las últimas versiones de Google Opera, Apple Safari, Chrome, y Mozilla Firefox &nbsp;son compatibles con casi todas las funciones HTML5.</p>
+<p></p>
+
+<strong>52) Nombra dos nuevas etiquetas incluidas en el HTML 5</strong>
+<p></p>
+<p></p>
+<p><strong>&nbsp;</strong>&lt;Video&gt; y &lt;Audio&gt; son nuevas etiquetas que están incluidas en la versión HTML5. Se usan generalmente como sustituto de Flash, Silverlight, y tecnologías similares para hacer la reproducción de elementos multimedia.</p>
+
+<strong>53) ¿Sabes cuáles son las dos etiquetas semánticas que se incluyen en la versión HTML5?</strong>
+<p>Las etiquetas semánticas incluidas recientemente en HTML5 son &lt;article&gt; y &lt;section&gt;. Una etiqueta de artículo representa un bloque completo de contenido que es una sección más grande.</p>
+<p></p>
+<p></p>
+
+<strong>54) ¿Qué es &lt;figure&gt; en HTML5?</strong>
+<p></p>
+<p>Es la etiqueta que representa una pieza de contenido de flujo autónomo.&nbsp; Utilizada como unidad única y referencia del flujo principal del documento.</p>
+<p></p>
+
+<strong>55) ¿Para qué sirve el elemento Canvas?</strong>
+<p></p>
+<p></p>
+<p>El elemento lienzo o Canvas&nbsp; ayuda en la construcción gráficos, cuadros, evitar Photoshop y para crear imágenes 2D y colocarlas directamente en el código HTML5.</p>
+
+<strong>56) ¿Cuáles son los nuevos elementos FORM disponibles en HTML5?</strong>
+<p></p>
+<p></p>
+<p>Los nuevos formulario en HTML5 ofrecen mayor funcionalidad y mejor que las versiones anteriores. Etiquetas para llevar a cabo estas funciones son:<br>1) &lt;datalist&gt; -&nbsp; etiqueta utilizada para especificar una lista de opciones para &nbsp;controles de entrada.<br>2) &lt;keygen&gt; - &nbsp;etiqueta  que representa un campo generador de pares de claves.<br> 3) &lt;output&gt; - representa el resultado de cualquier cálculo de scripting.<br></p>
+
+<strong>57) Indica dos beneficios del Almacenamiento Web HTML5</strong>
+<p></p>
+<p>Dos beneficios de Almacenamiento Web HTML5 son: <br> -Puede almacenar hasta 10 MB de datos, lo cual es más de lo que tienen las cookies.<br> -Los datos guardados de web, no se pueden transferir con la solicitud HTTP. Esto aumenta el rendimiento de la aplicación.</p>
+<p></p>
+
+<strong>58) ¿Cuáles son los dos tipos de almacenamiento web en HTML5?</strong>
+<p>Tipos de almacenamiento de HTML5:<br> <strong>Almacenamiento de sesiones:</strong> Almacena sólo datos de la sesión actual. Lo que significa que los datos almacenados durante la sesión se borrarán de forma automática cuando se cierre el navegador.<br> <strong>Almacenamiento local:</strong> El almacenamiento local es otro tipo de almacenamiento Web HTML5. En el almacenamiento local, los datos no se borran automáticamente cuando se cierre la ventana del navegador actual.</p>
+<p></p>
+<p></p>
+
+<strong>59) ¿Qué es el Application Cache en HTML5 y por qué se utiliza?</strong>
+<p></p>
+<p></p>
+<p>Es &nbsp;una aplicación web que está almacenada en caché. Puede ser accesible sin tener conexión a Internet. Algunas ventajas de Application Cache:<br><strong>Navegación fuera de línea</strong> - Los usuarios pueden usar la aplicación cuando están fuera de línea.<br><strong>Velocidad</strong> - cargan más rápido los recursos con caché.<br><strong>Reducir la carga del servidor</strong> - El navegador web solo descargará los recursos actualizados del servidor.</p>
+
+<strong>60) Explique cinco nuevos tipos de entrada proporcionados por HTML5 para formularios</strong>
+<p></p>
+<p></p>
+<p>Los nuevos e importantes tipos de datos que ofrece HTML5 son:<br> <strong>Fecha:</strong> Ofrece al usuario oportunidad de seleccionar una fecha.<br> <strong>Fecha-hora-local</strong>: Este entrada permite al usuario escoger una fecha y hora sin zona horaria.<br> <strong>Hora de la cita</strong>: Esta entrada ofrece al usuario seleccionar una fecha y hora con zona horaria.<br> <strong>Mes:</strong> Da oportunidad &nbsp;al usuario de seleccionar un mes y un año<br> <strong>Correo electrónico</strong>: Estos campos de entrada contienen un correo electrónico o dirección</p>

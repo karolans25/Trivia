@@ -6,11 +6,11 @@
 // Use your menus or right-click / control-click and choose "Inspect" > "Console"
 // console.log("Hello 🌎");
 
-var tipos = ["Comidas", "Bebidas"];
+let tipos = ["Comidas", "Bebidas"];
 
-var escogido = 0;
+let escogido = 0;
 
-var preguntas = [ ["1. ¿Cuáles son dulces típicos de México?",
+let preguntas = [ ["1. ¿Cuáles son dulces típicos de México?",
                    "2. ¿Cuáles son dulces típicos de Colombia?",
                    "3. ¿Cuáles son comidas típicas de Colombia?",
                    "4. ¿Cuáles son comidas típicas de México?"
@@ -22,7 +22,7 @@ var preguntas = [ ["1. ¿Cuáles son dulces típicos de México?",
                   ]
                 ];
 
-var opciones = [  [ ["Suspiro, turrón, alfajor", 
+let opciones = [  [ ["Suspiro, turrón, alfajor", 
                      "Papajotes, torrijas, churros", 
                      "Borrachito, alegría, tarugos"],
                     ["Cucas, manjar blanco, alfandoques",
@@ -50,13 +50,12 @@ var opciones = [  [ ["Suspiro, turrón, alfajor",
                   ]
                 ];
 
-var correctas = [[2, 0, 2, 1], [1, 1, 2, 0]];
+let correctas = [[2, 0, 2, 1], [1, 1, 2, 0]];
 
-var nombre = "";
+let nombre = "";
 
 function mostrar(n){
   nombre = n;
-  //console.log(nombre);
 }
 
 function reiniciar(){
@@ -71,7 +70,6 @@ function reiniciar(){
   //document.getElementById("bienvenida").style.display = 'block';
   //Modifica el valor del mensaje de bienvenida
   document.getElementById("bienvenida").innerHTML = "¿Quieres empezar a jugar?";
-  //var divSelector = document.getElementById("divSelector");
   if (document.getElementById("selectorT")){
     document.getElementById("selectorT").remove();
   }
@@ -100,11 +98,11 @@ function seleccionar(){
   document.getElementById("bienvenida").innerHTML = "Escoge el tema de las preguntas";
 
   //Crea y agrega un selector con las opciones de los tipos de preguntas
-  var divSelector = document.getElementById("divSelector");
-  var select = document.createElement("select");
+  let divSelector = document.getElementById("divSelector");
+  let select = document.createElement("select");
   select.setAttribute("id", "selectorT");
-  for (var tip in tipos){
-    var op = document.createElement("option");
+  for (let tip in tipos){
+    let op = document.createElement("option");
     op.setAttribute("value", tip);
     let opText = document.createTextNode(tipos[tip]);
     op.appendChild(opText);
@@ -113,8 +111,8 @@ function seleccionar(){
   divSelector.appendChild(select);
 
   //Crea el botón de seleccionar el tipo de preguntas
-  var divEscoger = document.getElementById("divEscoger");
-  var button = document.createElement("input");
+  let divEscoger = document.getElementById("divEscoger");
+  let button = document.createElement("input");
   button.type = "button";
   button.id = "buttonT";
   button.value = "Escoger";
@@ -135,18 +133,18 @@ function jugar(){
 }
 
 function onLoad(){
-  var lasPreguntas = preguntas[escogido];
-  var lasOpciones = opciones[escogido];
-  for (var i in lasPreguntas){
-    var pre = `pregunta-${parseInt(i)+1}`;
+  let lasPreguntas = preguntas[escogido];
+  let lasOpciones = opciones[escogido];
+  for (let i in lasPreguntas){
+    let pre = `pregunta-${parseInt(i)+1}`;
     const pPreguntas = document.getElementById(pre);
     const radios = document.getElementsByName(pre);
-    var elementos = document.getElementsByTagName("radio");
+    let elementos = document.getElementsByTagName("radio");
     console.log(elementos);
     //Modificar el valor de las etiquetas que son para pregunta
     pPreguntas.innerHTML = lasPreguntas[i];
-    for (var j in lasOpciones[i]){
-      var opc = `op-${parseInt(i) +1}.${parseInt(j) +1}`;
+    for (let j in lasOpciones[i]){
+      let opc = `op-${parseInt(i) +1}.${parseInt(j) +1}`;
       const laOpcion = document.getElementById(opc);
       laOpcion.style.backgroundColor = "var(--color-bg)";
       laOpcion.style.color = "black";
@@ -154,7 +152,6 @@ function onLoad(){
       laOpcion.innerHTML = lasOpciones[i][j];
       radios[j].value = lasOpciones[i][j];
     }
-    //radios.forEach(element => element.setAttribute("disabled", false));
   }
 }
 
@@ -164,21 +161,21 @@ function evaluarRespuestas() {
   document.getElementById("contestar").style.display = 'none';
   
   /**Inicia el proceso cuando se va a calificar */
-  var respuestas = [];
-  var selected = false;
-  var output = "";
-  var puntaje = 100;
+  let respuestas = [];
+  let selected = false;
+  let output = "";
+  let puntaje = 100;
 
-  var lasPreguntas = preguntas[escogido];
-  var lasOpciones = opciones[escogido];
-  for (var i in lasPreguntas){
-    var pre = `pregunta-${parseInt(i)+1}`;
-    var pEmoji = document.getElementById(pre);
-    var radios = document.getElementsByName(pre);
-    for (var radio of radios){
+  let lasPreguntas = preguntas[escogido];
+  let lasOpciones = opciones[escogido];
+  for (let i in lasPreguntas){
+    let pre = `pregunta-${parseInt(i)+1}`;
+    let pEmoji = document.getElementById(pre);
+    let radios = document.getElementsByName(pre);
+    for (let radio of radios){
       if (radio.type === 'radio' && radio.checked){ //&& lasOpciones.indexOf(radio.value) != -1){
-        var labelRadio = document.getElementById(`op-${parseInt(i)+1}.${lasOpciones[i].indexOf(radio.value)+1}`);
-        var labelCorrecta = document.getElementById(`op-${parseInt(i)+1}.${correctas[escogido][i]+1}`);
+        let labelRadio = document.getElementById(`op-${parseInt(i)+1}.${lasOpciones[i].indexOf(radio.value)+1}`);
+        let labelCorrecta = document.getElementById(`op-${parseInt(i)+1}.${correctas[escogido][i]+1}`);
         labelCorrecta.style.backgroundColor = "green";
         labelCorrecta.style.color = "white";
 
@@ -192,54 +189,12 @@ function evaluarRespuestas() {
         }
         selected = true;
       }
-      //radio.setAttribute("disabled", "disabled");
     }
     if (!selected) {
       pEmoji.append("\t💬 ❌");
       puntaje -= (100/lasPreguntas.length);
-      //labelCorrecta.style.backgroundColor = "yellow";
-      //labelCorrecta.style.color = "blue";
-      //respuestas.push([parseInt(i)+1, "No ha respondido"]);
-      //alert('No ha respondido la pregunta ' + (parseInt(i)+1).toString());
     }
     selected = false;
   }
   alert(`\t\t Gracias por participar!\n\n\t\t\t\tTu puntaje fue de ${puntaje}/100`);
-  /*
-  for (var respuesta of respuestas){
-    output += "Respuesta a la pregunta " + respuesta[0] + ":\n\t" + respuesta[1] + "\n\n";
-  }
-  alert(output); 
-  */
-
 }
-
-
-/* 
-Make the "Click me!" button move when the visitor clicks it:
-- First add the button to the page by following the steps in the TODO 🚧
-*/
-/*
-const btn = document.querySelector("button"); // Get the button from the page
-if (btn) { // Detect clicks on the button
-  btn.onclick = function () {
-    // The 'dipped' class in style.css changes the appearance on click
-    btn.classList.toggle("dipped");
-  };
-}
-
-// ----- GLITCH STARTER PROJECT HELPER CODE -----
-
-// Open file when the link in the preview is clicked
-let goto = (file, line) => {
-  window.parent.postMessage(
-    { type: "glitch/go-to-line", payload: { filePath: file, line: line } }, "*"
-  );
-};
-// Get the file opening button from its class name
-const filer = document.querySelectorAll(".fileopener");
-filer.forEach((f) => {
-  f.onclick = () => { goto(f.dataset.file, f.dataset.line); };
-});
-
-*/

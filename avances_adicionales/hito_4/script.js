@@ -22,6 +22,8 @@ let preguntas = [ ["1. ¿Cuáles son dulces típicos de México?",
                   ]
                 ];
 
+//let test = {{ preguntas | tojson }};
+
 let opciones = [  [ ["Suspiro, turrón, alfajor", 
                      "Papajotes, torrijas, churros", 
                      "Borrachito, alegría, tarugos"],
@@ -70,6 +72,23 @@ function mostrar(n){
   nombre = n;
 }
 
+//Aún no implementada
+function myFunction() {
+  const firstname = document.getElementById("fname").value;
+  const lastname = document.getElementById("lname").value;
+  //const dict_values = {firstname, lastname} //Pass the javascript variables to a dictionary.
+  const dict_values = {nombre} //Pass the javascript variables to a dictionary.
+  const s = JSON.stringify(dict_values); // Stringify converts a JavaScript object or value to a JSON string
+  console.log(s); // Prints the variables to console window, which are in the JSON format
+  window.alert(s)
+  $.ajax({
+      url:"/test",
+      type:"POST",
+      contentType: "application/json",
+      data: JSON.stringify(s)});
+
+}
+
 function reiniciar(){
 //Esconde los div y container
   document.getElementById("containerTrivia").style.display = 'none';
@@ -81,14 +100,16 @@ function reiniciar(){
   document.getElementById("bienvenida").style.display = 'flex';
   //Pone por defecto el valor del input text
   document.getElementById("nombreL").value = "";
+  document.getElementById("bienvenida").innerHTML = "¿Quieres empezar a jugar?";
 }
 
 function login(){
   reiniciar();
   document.getElementById("nombreL").value = nombre;
   //Modifica el valor del mensaje de bienvenida
-  document.getElementById("bienvenida").innerHTML = "¿Quieres empezar a jugar?";
+  //document.getElementById("bienvenida").innerHTML = "¿Quieres empezar a jugar?";
   alert ("Hola " + nombre);
+  //myFunction();
   seleccionar();
 }
 

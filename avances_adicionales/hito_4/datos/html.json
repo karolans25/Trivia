@@ -1,0 +1,482 @@
+{
+    "pregunta-1": {
+        "name": "<strong>1) \u00bfQu\u00e9 es HTML?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>HTML es la abreviatura de HyperText Markup Language: es el lenguaje de la World Wide Web. Es un lenguaje de formato de texto est\u00e1ndar usado para crear y mostrar p\u00e1ginas en la Web. Los documentos HTML est\u00e1n compuestos de dos cosas: contenido y &nbsp;etiquetas que le dan formato para que se muestre correctamente en las p\u00e1ginas. </p>\n"
+        ]
+    },
+    "pregunta-2": {
+        "name": "<strong>2) \u00bfQu\u00e9 son las etiquetas?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>Es el contenido que se coloca entre las etiquetas HTML, con la finalidad de darle formato correctamente. Usa el s\u00edmbolo menor que (&lt;) y el mayor que (&gt;). Un s\u00edmbolo de barra oblicua tambi\u00e9n se utiliza como etiqueta de cierre <strong>Ejemplo:</strong>&lt;strong&gt;sample&lt;/strong&gt;</p>\n"
+        ]
+    },
+    "pregunta-3": {
+        "name": "<strong>3) \u00bfTodas las etiquetas HTML vienen en pares?</strong>\n",
+        "opciones": [
+            "<p>No, algunas etiquetas HTML simples, &nbsp;no necesitan una etiqueta de cierre. Algunos ejemplos son las etiquetas &lt;img&gt; y &lt;br&gt;. </p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-4": {
+        "name": "<strong>4) \u00bfCu\u00e1les son algunas de las listas comunes que se pueden utilizar al dise\u00f1ar una p\u00e1gina?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Se puede insertar cualquiera o una combinaci\u00f3n de los siguientes tipos de lista:<br>- &nbsp;clasificada<br>- &nbsp;no ordenada<br>- de definiciones<br>- &nbsp;de men\u00fa<br>- &nbsp;de directorio<br>Estos tipos de lista, cada uno usa un conjunto de etiquetas distintas para componer</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-5": {
+        "name": "<strong>5) \u00bfC\u00f3mo se inserta un comentario en HTML?</strong>\n",
+        "opciones": [
+            "<p>Los comentarios en HTML empiezan con \"&lt;!-\" y terminan con \"-&gt;\".<strong>Ejemplo</strong>:&lt;!-- A SAMPLE COMMENT --&gt;</p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-6": {
+        "name": "<strong>6) \u00bfTodas las entidades de caracteres se muestran correctamente en todos los sistemas?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>No, &nbsp;algunas entidades de caracteres no se pueden mostrar, cuando el sistema operativo en el que se ejecuta el navegador no admite los caracteres. Cuando sucede esto, los caracteres se presentan como cuadros.</p>\n"
+        ]
+    },
+    "pregunta-7": {
+        "name": "<strong>7) \u00bfQu\u00e9 es un mapa de imagen?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>El mapa de im\u00e1genes permite enlazar muchas p\u00e1ginas web distintas, usando una sola imagen. Tambi\u00e9n, puede definir formas en las im\u00e1genes que desea que formen parte de un mapeo de im\u00e1genes. </p>\n"
+        ]
+    },
+    "pregunta-8": {
+        "name": "<strong>8) \u00bfCu\u00e1l es la ventaja de colapsar el espacio en blanco?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Son una secuencia en blanco de caracteres de espacio, que se trata como un car\u00e1cter de espacio \u00fanico en HTML. Motivado a que el navegador colapsa m\u00faltiples espacios en un solo espacio, puede sangrar l\u00edneas de texto sin preocuparse por los muchos espacios. Esto permite organizar el c\u00f3digo HTML en un formato &nbsp;m\u00e1s legible.</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-9": {
+        "name": "<strong>9) \u00bfSe pueden establecer valores de atributo para cualquier cosa o hay valores espec\u00edficos que ellos aceptan?</strong>\n",
+        "opciones": [
+            "<p>Algunos valores de atributo s\u00f3lo &nbsp;pueden establecerse en valores predefinidos. Otros atributos aceptan cualquier valor num\u00e9rico, que represente el n\u00famero de p\u00edxeles de un tama\u00f1o.</p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-10": {
+        "name": "<strong>10) \u00bfC\u00f3mo se inserta un s\u00edmbolo de copyright en una p\u00e1gina del navegador?</strong>\n",
+        "opciones": [
+            "<p>Para insertar el s\u00edmbolo de copyright, se tiene que escribir &amp;copy; o &amp; #169; en&nbsp; un archivo HTML.</p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-11": {
+        "name": "<strong>11) \u00bfC\u00f3mo se crean enlaces a secciones dentro de la misma p\u00e1gina?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Los enlaces se crean usando la etiqueta &lt;a&gt;, con referencia mediante el uso del s\u00edmbolo del n\u00famero (#). <strong>Ejemplo</strong>: puede tener una l\u00ednea como &lt;a href=\"#Los mejores\"&gt;Volver a la parte superior &lt;/a&gt;, lo que da lugar a la aparici\u00f3n de las palabras 'Volver a la parte superior' en la p\u00e1gina web y enlaces a un marcador llamado 'Los mejores'. A continuaci\u00f3n, se escribe un comando de etiqueta separado como &lt;a name=\"Los mejores\"&gt; en alg\u00fan lugar en la parte superior de la misma p\u00e1gina web para que el usuario est\u00e9 vinculado a ese punto cuando haga clic en 'Volver a la parte superior'. </p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-12": {
+        "name": "<strong>12) \u00bfHay alguna manera de mantener los elementos de la lista directamente en un archivo HTML?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>Se puede hacer usando sangr\u00edas para mantener los elementos de lista rectos. Si se usa sangria cada lista subanunciada m\u00e1s all\u00e1 de la lista matriz que la contiene puedes determinar de un simple vistazo las diferentes listas y los elementos que contiene.</p>\n"
+        ]
+    },
+    "pregunta-13": {
+        "name": "<strong>13) Si ves una direcci\u00f3n web en una revista, \u00bfa qu\u00e9 p\u00e1gina web apunta?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Cada p\u00e1gina web en la web puede tener una direcci\u00f3n web por separado. Casi todas estas direcciones son relativas a la p\u00e1gina web de mayor importancia. La direcci\u00f3n web publicada en las revistas normalmente apunta a la m\u00e1s importante. Desde esta p\u00e1gina, puede entrar a las dem\u00e1s p\u00e1ginas del sitio web.</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-14": {
+        "name": "<strong>14) \u00bfCu\u00e1l es el uso del texto alternativo en el mapeo de im\u00e1genes?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>Se usa el texto alternativo, cuando se utilizan mapas de im\u00e1genes para poder poner un texto descriptivo en cada enlace de zona activa. </p>\n"
+        ]
+    },
+    "pregunta-15": {
+        "name": "<strong>15) \u00bfFuncionan los archivos HTML m\u00e1s antiguos en los navegadores m\u00e1s nuevos?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>S\u00ed, los archivos HTML antiguos son compatibles con el est\u00e1ndar HTML, y puede ser posible que algunas funciones no funcionen.</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-16": {
+        "name": "<strong>16) \u00bfUn hiperv\u00ednculo se aplica s\u00f3lo al texto?</strong>\n",
+        "opciones": [
+            "<p>No, los hiperv\u00ednculos se pueden usar en el texto y en las im\u00e1genes. Lo que indica &nbsp;que puede convertir una imagen en un enlace, que permita a los usuarios enlazar a otra p\u00e1gina al hacer clic. Rodee la imagen dentro de las combinaciones de etiquetas &lt;a href=\" \"&gt;...&lt;/a&gt;.</p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-17": {
+        "name": "<strong>17) Si el sistema operativo del usuario no soporta el car\u00e1cter necesario, \u00bfc\u00f3mo se puede representar el s\u00edmbolo?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Se puede mostrar como una imagen.</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-18": {
+        "name": "<strong>18) \u00bfC\u00f3mo se cambia el tipo de n\u00famero en el medio de una lista?</strong>\n",
+        "opciones": [
+            "<p>El atributo type puede usarse para cambiar el tipo de numeraci\u00f3n de cualquier elemento de la lista. El atributo de valor puede cambiar el \u00edndice num\u00e9rico<strong>.</strong></p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-19": {
+        "name": "<strong>19) \u00bfQu\u00e9 son las hojas de estilo?</strong>\n",
+        "opciones": [
+            "<p>Las hojas de estilo: son las que permiten crear plantillas de estilo consistentes, transportables y definidas. Estas plantillas se vinculan a varias p\u00e1ginas web distintas, que facilita el mantenimiento y cambio de aspecto de las p\u00e1ginas web dentro del sitio. </p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-20": {
+        "name": "<strong>20) Indique los tipos de vi\u00f1etas disponibles en HTML </strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Con las listas ordenadas, puedes utilizar distintas vi\u00f1etas, incluyendo n\u00fameros alfab\u00e9ticos y romanos. El atributo de tipo para listas desordenadas&nbsp; puede ser cuadrado, disco o c\u00edrculo.<strong>&nbsp;</strong></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-21": {
+        "name": "<strong>21) \u00bfC\u00f3mo se crea un texto multicolor en una p\u00e1gina web?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>Para crear texto con muchos colores, usa &nbsp;etiquetas &lt;font color=\"color\"&gt;...&lt;/font&gt; para cada car\u00e1cter que desee aplicar color. Puede usar la combinaci\u00f3n de etiquetas tantas veces como se necesite, rodeando un solo car\u00e1cter o una palabra entera. </p>\n"
+        ]
+    },
+    "pregunta-22": {
+        "name": "<strong>22) \u00bfPor qu\u00e9 hay valores de entidades de caracteres num\u00e9ricos y de caracteres con nombre?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Los valores num\u00e9ricos se toman de los valores ASCII de los diferentes caracteres, pero a veces son dif\u00edciles de recordar. Motivado a esto, se crearon valores de entidades de caracteres con nombre que facilitan a los dise\u00f1adores de p\u00e1ginas web su uso. </p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-23": {
+        "name": "<strong>23) Escriba una secuencia de etiquetas de tabla HTML que produzca lo siguiente:<br>50 unidades 100 500<br>10 unidades 5 50<br></strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>&lt;table&gt; <br>&lt;tr&gt; <br>&lt;td&gt;50 pcs&lt;/td&gt; <br>&lt;td&gt; <br>100&lt;/td&gt; <br>&lt;td&gt;500&lt;/td&gt; <br>&lt;/tr&gt; <br>&lt;tr&gt; <br>&lt;td&gt;10 pcs&lt;/td&gt; <br>&lt;td&gt;5&lt;/td&gt; <br>&lt;td&gt;50&lt;/td&gt; <br>&lt;/tr&gt; <br>&lt;/table&gt; <br></p>\n"
+        ]
+    },
+    "pregunta-24": {
+        "name": "<strong>24) \u00bfCu\u00e1l es la ventaja de agrupar varias casillas de verificaci\u00f3n?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Agruparlas ayuda a organizarlas. Los botones de la casilla de verificaci\u00f3n pueden tener su nombre y no es necesario que pertenezcan a un grupo. Una sola p\u00e1gina web puede tener muchos grupos, distintos de casillas de verificaci\u00f3n.</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-25": {
+        "name": "<strong>25) \u00bfQu\u00e9 suceder\u00e1 si se superponen conjuntos de etiquetas?</strong>\n",
+        "opciones": [
+            "<p>S\u00f3lo puede ser reconocida la primera etiqueta. Este problema lo vas a encontrar cuando el texto no se muestre correctamente en la pantalla del navegador.</p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-26": {
+        "name": "<strong>26) \u00bfQu\u00e9 son los applets?</strong>\n",
+        "opciones": [
+            "<p>Los applets son programas peque\u00f1os que pueden incrustarse en las p\u00e1ginas web para realizar alguna funci\u00f3n espec\u00edfica como animaciones, c\u00e1lculos y procesamiento de informaci\u00f3n. Los applets est\u00e1n escritos en lenguaje Java.</p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-27": {
+        "name": "<strong>27) \u00bfQu\u00e9 pasa si no hay texto entre las etiquetas o si un texto fue omitido por error? \u00bfAfectar\u00e1 la visualizaci\u00f3n del archivo HTML?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Si no hay texto entre las etiquetas, tampoco hay nada que darle formato. Por lo que, no aparecer\u00e1 ning\u00fan formato. Algunas etiquetas, como una etiqueta de cierre como la etiqueta &lt;img&gt; no necesitan texto entre ellas.</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-28": {
+        "name": "<strong>28) \u00bfEs posible establecer colores espec\u00edficos para los bordes de las tablas?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>Si, usando hojas de estilo pero los colores en una tabla que no usen hojas de estilo ser\u00e1n los mismos que los del color del texto.</p>\n"
+        ]
+    },
+    "pregunta-29": {
+        "name": "<strong>29) \u00bfC\u00f3mo se crea un enlace que se conectar\u00e1 a otra p\u00e1gina web cuando se hace clic en \u00e9l?</strong>\n",
+        "opciones": [
+            "<p>Utilice la etiqueta href. El formato general para esto es: &lt;a href=\"sitio\"&gt;texto&lt;/a&gt; reemplazando \"sitio\" con la URL real de la p\u00e1gina, a la que se supone que est\u00e1 vinculado cuando se hace clic en el texto.</p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-30": {
+        "name": "<strong>30) \u00bfQu\u00e9 otras formas se pueden utilizar para alinear las im\u00e1genes y envolver el texto?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Una forma \u00fatil de envolver el texto alrededor de una imagen es usar hojas de estilo o tablas. </p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-31": {
+        "name": "<strong>31) \u00bfUn solo enlace de texto puede apuntar a dos p\u00e1ginas web diferentes?</strong>\n",
+        "opciones": [
+            "<p>No. La etiqueta &lt;a&gt; s\u00f3lo acepta un \u00fanico atributo href, y apuntar a una sola p\u00e1gina web.</p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-32": {
+        "name": "<strong>32) \u00bfCu\u00e1l es la diferencia entre las listas de directorios y men\u00fas y las listas desordenadas?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>La diferencia es que el directorio y las listas de men\u00fas no incluyen atributos que permita cambiar el estilo de la vi\u00f1eta.</p>\n"
+        ]
+    },
+    "pregunta-33": {
+        "name": "<strong>33) \u00bfSe puede cambiar el color de las vi\u00f1etas?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>El color de vi\u00f1eta es el mismo que el del primer car\u00e1cter del elemento de la lista. Si rodea el &lt;li&gt; y el primer car\u00e1cter con un grupo de etiquetas &lt;font&gt; con el conjunto de atributos de color, el color de &nbsp;vi\u00f1eta y el primer car\u00e1cter, ser\u00e1n de&nbsp; color distinto al del texto.</p>\n"
+        ]
+    },
+    "pregunta-34": {
+        "name": "<strong>34) \u00bfCu\u00e1les son los l\u00edmites del tama\u00f1o del campo de texto?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>El tama\u00f1o de un campo de texto predeterminado es de unos 13 caracteres. Sin embargo, si incluye el atributo size se puede establecer que el valor del tama\u00f1o sea tan bajo como 1. El valor del tama\u00f1o m\u00e1ximo esta determinado por el ancho del navegador. Si el atributo size se establece en 0, el tama\u00f1o se establecer\u00e1 en el tama\u00f1o de 13 caracteres.</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-35": {
+        "name": "<strong>35) \u00bfLas etiquetas &lt;th&gt; siempre tienen que ir al principio de una fila o columna?</strong>\n",
+        "opciones": [
+            "<p>Toda etiqueta &lt;tr&gt; se puede cambiar por una etiqueta &lt;th&gt;. Esto hace que el texto que est\u00e1 en la etiqueta &lt;th&gt; se muestre en negrita en el navegador. Aunque las etiquetas &lt;th&gt; se usan principalmente para los headings, no es necesario usarlas solo para ellos.</p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-36": {
+        "name": "<strong>36) \u00bfCu\u00e1l es la relaci\u00f3n entre los atributos 'border' y 'rule'?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>Los bordes de celda tienen predeterminados un grosor de 1 p\u00edxel, los cuales se a\u00f1aden en forma autom\u00e1tica entre celdas si el atributo 'border' se establece en un valor diferente de cero. De igual manera, si el atributo border no se incluye, aparece un borde predeterminado de 1 p\u00edxel, si el atributo rules se adhiere a la etiqueta &lt;table&gt;.</p>\n"
+        ]
+    },
+    "pregunta-37": {
+        "name": "<strong>37) \u00bfQu\u00e9 es un 'marquee'?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Una Marquee te permite poner &nbsp;un texto de desplazamiento en una p\u00e1gina web. Para ello, &nbsp;se coloca cualquier texto que desees que aparezca desplaz\u00e1ndose dentro de las etiquetas &lt;marquee&gt; y &lt;/marquee&gt;.</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-38": {
+        "name": "<strong>38) \u00bfC\u00f3mo se crea un texto en una p\u00e1gina web que le permitir\u00e1 enviar un correo electr\u00f3nico al hacer clic?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Utilizando el comando mailto dentro de la etiqueta href. <strong>Ejemplo:</strong>&lt;a href=\u201dmailto:youremailaddress\u201d&gt;text to be clicked&lt;/a&gt;</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-39": {
+        "name": "<strong>39) \u00bfSon las etiquetas &lt;br&gt; la \u00fanica manera de separar secciones de texto?</strong>\n",
+        "opciones": [
+            "<p>No. La etiqueta &lt;br&gt; es una manera de separar l\u00edneas de texto. Hay otras etiquetas, como &lt;p&gt; y &lt;blockquote&gt;, que &nbsp;tambi\u00e9n sirven para separar secciones de texto.</p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-40": {
+        "name": "<strong>40) \u00bfHay casos en los que el texto aparecer\u00e1 fuera del navegador?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Si el texto forma parte de una celda de tabla con un ancho definido, el texto puede extenderse m\u00e1s all\u00e1 de la ventana del navegador.</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-41": {
+        "name": "<strong>41) \u00bfEn qu\u00e9 se diferencian los enlaces activos de los enlaces normales?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>El color para los enlaces normales y activos es el azul. Varios navegadores reconocen un enlace activo, cuando el cursor del rat\u00f3n se coloca sobre ese enlace. Se consideran normales aquellos que no tienen un cursor de rat\u00f3n sobre ese enlace.</p>\n"
+        ]
+    },
+    "pregunta-42": {
+        "name": "<strong>42) \u00bfLimitan las hojas de estilo el n\u00famero de nuevas definiciones de estilo que se pueden incluir entre par\u00e9ntesis?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Las hojas de estilo no limitan el n\u00famero de definiciones de estilo que pueden ser incluidas entre par\u00e9ntesis para un selector determinado.</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-43": {
+        "name": "<strong>43) \u00bfPuedo especificar valores fraccionarios como 670 o 973 para el grosor de la fuente (font-weight)?</strong>\n",
+        "opciones": [
+            "<p>Eso depende del navegador, pero el est\u00e1ndar no soporta valores de peso fraccionarios. Los valores para ser aceptados deben terminar con dos ceros.</p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-44": {
+        "name": "<strong>44) \u00bfCu\u00e1l es la jerarqu\u00eda que se sigue cuando se trata de hojas de estilo?</strong>\n",
+        "opciones": [
+            "<p>La definici\u00f3n m\u00e1s cercana a la etiqueta real tiene prioridad. El estilo en l\u00ednea tiene prioridad sobre hojas de estilo incrustadas que tienen prioridad sobre hojas de estilo externas.</p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-45": {
+        "name": "<strong>45) \u00bfPueden agruparse varios selectores con nombres de clase?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Se puede definir varios selectores con la misma definici\u00f3n de estilo haciendo la separaci\u00f3n con comas. Esta t\u00e9cnica tambi\u00e9n puede funcionar para selectores con nombres de clase.</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-46": {
+        "name": "<strong>46) \u00bfQu\u00e9 sucede si se abre el archivo CSS externo en un navegador?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>La \u00fanica forma de usar un archivo CSS externo es haciendo referencia a \u00e9l utilizando &lt;link/&gt; tag dentro de otro documento HTML. Esto es porque cuando se intenta abrir el archivo CSS externo en un navegador, el navegador no lo puede abrir porque el archivo tiene una extensi\u00f3n distinta.</p>\n"
+        ]
+    },
+    "pregunta-47": {
+        "name": "<strong>47) \u00bfC\u00f3mo se convierte una imagen en una imagen de fondo de una p\u00e1gina web?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Utilizando un c\u00f3digo de etiqueta despu\u00e9s de la etiqueta &lt;/head&gt; como se indica: &lt;body background = \"image.gif\"&gt; . Reemplace image.gif con el nombre de su archivo de imagen. Esto toma la foto y la convierte en la imagen de fondo de su p\u00e1gina web.</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-48": {
+        "name": "<strong>48) \u00bfQu\u00e9 sucede si la propiedad tipo lista se utiliza en un elemento no listado como un p\u00e1rrafo?</strong>\n",
+        "opciones": [
+            "<p>La propiedad va a ser &nbsp;ignorada y no afectar\u00e1 al p\u00e1rrafo.</p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-49": {
+        "name": "<strong>49) \u00bfCu\u00e1ndo es apropiado usar frames?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>Los frames (marcos) hacen que la navegaci\u00f3n por un sitio sea m\u00e1s f\u00e1cil. Si los enlaces principales hacia el sitio est\u00e1n en un frame que aparece en la parte superior o a lo largo del borde del navegador el contenido de los enlaces se muestra en el resto de la ventana del navegador.</p>\n"
+        ]
+    },
+    "pregunta-50": {
+        "name": "<strong>50) \u00bfQu\u00e9 sucede si el n\u00famero de valores en las filas o el atributo cols no suma el 100 por ciento?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>El navegador calcula el tama\u00f1o de los marcos en relaci\u00f3n con la suma total de los valores. Si el atributo cols se establece en 100%, 200% &nbsp;y tienen menos del 100%, no va a mostrar los dos marcos verticales.</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-51": {
+        "name": "<strong>51) \u00bfQu\u00e9 navegadores soportan HTML5?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Las \u00faltimas versiones de Google Opera, Apple Safari, Chrome, y Mozilla Firefox &nbsp;son compatibles con casi todas las funciones HTML5.</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-52": {
+        "name": "<strong>52) Nombra dos nuevas etiquetas incluidas en el HTML 5</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p><strong>&nbsp;</strong>&lt;Video&gt; y &lt;Audio&gt; son nuevas etiquetas que est\u00e1n incluidas en la versi\u00f3n HTML5. Se usan generalmente como sustituto de Flash, Silverlight, y tecnolog\u00edas similares para hacer la reproducci\u00f3n de elementos multimedia.</p>\n"
+        ]
+    },
+    "pregunta-53": {
+        "name": "<strong>53) \u00bfSabes cu\u00e1les son las dos etiquetas sem\u00e1nticas que se incluyen en la versi\u00f3n HTML5?</strong>\n",
+        "opciones": [
+            "<p>Las etiquetas sem\u00e1nticas incluidas recientemente en HTML5 son &lt;article&gt; y &lt;section&gt;. Una etiqueta de art\u00edculo representa un bloque completo de contenido que es una secci\u00f3n m\u00e1s grande.</p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-54": {
+        "name": "<strong>54) \u00bfQu\u00e9 es &lt;figure&gt; en HTML5?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Es la etiqueta que representa una pieza de contenido de flujo aut\u00f3nomo.&nbsp; Utilizada como unidad \u00fanica y referencia del flujo principal del documento.</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-55": {
+        "name": "<strong>55) \u00bfPara qu\u00e9 sirve el elemento Canvas?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>El elemento lienzo o Canvas&nbsp; ayuda en la construcci\u00f3n gr\u00e1ficos, cuadros, evitar Photoshop y para crear im\u00e1genes 2D y colocarlas directamente en el c\u00f3digo HTML5.</p>\n"
+        ]
+    },
+    "pregunta-56": {
+        "name": "<strong>56) \u00bfCu\u00e1les son los nuevos elementos FORM disponibles en HTML5?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>Los nuevos formulario en HTML5 ofrecen mayor funcionalidad y mejor que las versiones anteriores. Etiquetas para llevar a cabo estas funciones son:<br>1) &lt;datalist&gt; -&nbsp; etiqueta utilizada para especificar una lista de opciones para &nbsp;controles de entrada.<br>2) &lt;keygen&gt; - &nbsp;etiqueta  que representa un campo generador de pares de claves.<br> 3) &lt;output&gt; - representa el resultado de cualquier c\u00e1lculo de scripting.<br></p>\n"
+        ]
+    },
+    "pregunta-57": {
+        "name": "<strong>57) Indica dos beneficios del Almacenamiento Web HTML5</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p>Dos beneficios de Almacenamiento Web HTML5 son: <br> -Puede almacenar hasta 10 MB de datos, lo cual es m\u00e1s de lo que tienen las cookies.<br> -Los datos guardados de web, no se pueden transferir con la solicitud HTTP. Esto aumenta el rendimiento de la aplicaci\u00f3n.</p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-58": {
+        "name": "<strong>58) \u00bfCu\u00e1les son los dos tipos de almacenamiento web en HTML5?</strong>\n",
+        "opciones": [
+            "<p>Tipos de almacenamiento de HTML5:<br> <strong>Almacenamiento de sesiones:</strong> Almacena s\u00f3lo datos de la sesi\u00f3n actual. Lo que significa que los datos almacenados durante la sesi\u00f3n se borrar\u00e1n de forma autom\u00e1tica cuando se cierre el navegador.<br> <strong>Almacenamiento local:</strong> El almacenamiento local es otro tipo de almacenamiento Web HTML5. En el almacenamiento local, los datos no se borran autom\u00e1ticamente cuando se cierre la ventana del navegador actual.</p>\n",
+            "<p></p>\n",
+            "<p></p>\n"
+        ]
+    },
+    "pregunta-59": {
+        "name": "<strong>59) \u00bfQu\u00e9 es el Application Cache en HTML5 y por qu\u00e9 se utiliza?</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>Es &nbsp;una aplicaci\u00f3n web que est\u00e1 almacenada en cach\u00e9. Puede ser accesible sin tener conexi\u00f3n a Internet. Algunas ventajas de Application Cache:<br><strong>Navegaci\u00f3n fuera de l\u00ednea</strong> - Los usuarios pueden usar la aplicaci\u00f3n cuando est\u00e1n fuera de l\u00ednea.<br><strong>Velocidad</strong> - cargan m\u00e1s r\u00e1pido los recursos con cach\u00e9.<br><strong>Reducir la carga del servidor</strong> - El navegador web solo descargar\u00e1 los recursos actualizados del servidor.</p>\n"
+        ]
+    },
+    "pregunta-60": {
+        "name": "<strong>60) Explique cinco nuevos tipos de entrada proporcionados por HTML5 para formularios</strong>\n",
+        "opciones": [
+            "<p></p>\n",
+            "<p></p>\n",
+            "<p>Los nuevos e importantes tipos de datos que ofrece HTML5 son:<br> <strong>Fecha:</strong> Ofrece al usuario oportunidad de seleccionar una fecha.<br> <strong>Fecha-hora-local</strong>: Este entrada permite al usuario escoger una fecha y hora sin zona horaria.<br> <strong>Hora de la cita</strong>: Esta entrada ofrece al usuario seleccionar una fecha y hora con zona horaria.<br> <strong>Mes:</strong> Da oportunidad &nbsp;al usuario de seleccionar un mes y un a\u00f1o<br> <strong>Correo electr\u00f3nico</strong>: Estos campos de entrada contienen un correo electr\u00f3nico o direcci\u00f3n</p>\n"
+        ]
+    }
+}
