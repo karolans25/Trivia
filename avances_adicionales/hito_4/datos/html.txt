@@ -295,6 +295,7 @@ Es &nbsp;una aplicación web que está almacenada en caché. Puede ser accesible
 2
 <strong>60) Explique cinco nuevos tipos de entrada proporcionados por HTML5 para formularios</strong>
 Opción 1
-Opción 1
 Los nuevos e importantes tipos de datos que ofrece HTML5 son:<br> <strong>Fecha:</strong> Ofrece al usuario oportunidad de seleccionar una fecha.<br> <strong>Fecha-hora-local</strong>: Este entrada permite al usuario escoger una fecha y hora sin zona horaria.<br> <strong>Hora de la cita</strong>: Esta entrada ofrece al usuario seleccionar una fecha y hora con zona horaria.<br> <strong>Mes:</strong> Da oportunidad &nbsp;al usuario de seleccionar un mes y un año<br> <strong>Correo electrónico</strong>: Estos campos de entrada contienen un correo electrónico o dirección
-2
+Opción 1
+1
+ES NECESARIO DEJAR ESTA LÍNEA DENTRO DEL FICHERO

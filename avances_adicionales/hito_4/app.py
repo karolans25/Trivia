@@ -1,4 +1,3 @@
-#from flask import request, Flask, render_template
 from flask import Flask
 from flask_cors import CORS
 import json
@@ -9,7 +8,7 @@ docs = ["datos/html.txt", "datos/javascript.txt"]
 def read(file):
     f = open(file, "r")
     lineas = f.readlines()
-    limit = int((len(lineas)+1)/5)
+    limit = int((len(lineas))/5)
     preguntas = {}
 
     for i in range(limit):
@@ -18,20 +17,17 @@ def read(file):
                       "correcta": lineas[i*5 +4][:-1] 
                     }
         preguntas[f'pregunta-{i+1}'] = thisdict
-    #datos = {docs[0][6:-4]: preguntas}
     return preguntas
 
 def init(docs):
     datos = dict()
     for i in docs:
         datos[i[6:-4]] = read(i)
-    
+    with open("datos/datos.json", "w") as j:
+        json.dump(datos, j)    
     return datos
 
-
 data = init(docs)
-
-#print(datos)
 
 with open('datos/html.json', 'w') as file:
     json.dump(data, file, indent=4)

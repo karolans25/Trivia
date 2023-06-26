@@ -5,73 +5,9 @@
 // Print a message in the browser's dev tools console each time the page loads
 // Use your menus or right-click / control-click and choose "Inspect" > "Console"
 // console.log("Hello 🌎");
+let tipos = [], preguntas = [], opciones = [], correctas = [];
 
-/**
-let tipos = ["Comidas", "Bebidas", "Dulces"];
-
-let preguntas = [ ["1. ¿Cuáles son dulces típicos de México?",
-                   "2. ¿Cuáles son dulces típicos de Colombia?",
-                   "3. ¿Cuáles son comidas típicas de Colombia?"
-                  ],
-                  ["1. ¿Cuáles son bebidas frías típicas de México?",
-                   "2. ¿Cuáles son bebidas frías típicas de Colombia?",
-                   "3. ¿Cuáles son bebidas calientes típicas de Colombia?",
-                   "4. ¿Cuáles son bebidas calientes típicas de México?"
-                  ],
-                  ["1. ¿Cuáles son bebidas frías típicas de México?",
-                   "2. ¿Cuáles son bebidas frías típicas de Colombia?"
-                  ]
-                ];
-
-let opciones = [  [ ["Suspiro, turrón, alfajor", 
-                     "Papajotes, torrijas, churros", 
-                     "Borrachito, alegría, tarugos"],
-                    ["Cucas, manjar blanco, alfandoques",
-                     "Éclair, charlotte, coulant de chocolate", 
-                     "Muéganos, ate, palanquetas, camotes"],
-                    ["Bratwurst, pretzel, schnitzel", 
-                     "Tacos, mole, chilaquiles", 
-                     "Bandeja paisa, ajiaco, mote de queso"]
-                  ],
-                  [ ["Guaraná, jugo de caña, pulque",
-                     "Pozol, pulque, tepache",
-                     "Los e y los f"],
-                    ["Limoncello, sambuca, fernet",
-                     "Lulada, campús, jugo de borojó",
-                     "Trascalate, cebadina, tejuino"],
-                    ["Carato, papelón con limón, tizana",
-                     "Chocolate, atole negro, ponche",
-                     "Canelazo, aguadepanela, chocolate"],
-                    ["Los a y los b",
-                     "Los c y los d",
-                     "Los e y los f"]
-                  ],
-                  [ ["Guaraná, jugo de caña, pulque",
-                     "Pozol, pulque, tepache",
-                     "Los e y los f"],
-                    ["Limoncello, sambuca, fernet",
-                     "Lulada, campús, jugo de borojó",
-                     "Trascalate, cebadina, tejuino"]
-                  ]
-                ];
-
-//let correctas = [[2, 0, 2, 1], [1, 1, 2, 0]];
-//let correctas = [[2, 0, 2], [1, 1, 2, 0]];
-let correctas = [[2, 0, 2], [1, 1, 2, 0], [0, 0]];
-*/
-
-let tipos = [];
-let preguntas = [];
-let opciones = [];
-let correctas = [];
-
-let escogido = 0;
-
-let nombre = "";
-
-let puntaje = 0;
-
-let maxPuntaje = 100;
+let escogido = 0, nombre = "", puntaje = 0, maxPuntaje = 100;
 
 let port = 8080;
 
@@ -79,8 +15,10 @@ function mostrar(n){
   nombre = n;
 }
 
+//FUNCIONALIDAD BOTÓN REINICIAR
+// Llama a crearArreglos()
 function reiniciar(){
-//Esconde los div y container
+  //Esconde los div y container
   document.getElementById("containerTrivia").style.display = 'none';
   document.getElementById("contestar").style.display = 'none';
   document.getElementById("reiniciar").style.display = 'none';
@@ -99,15 +37,29 @@ function reiniciar(){
   request.send();
   request.onload = function() {
     const data = request.response;
-    //datos = superHeroes;
-    console.log(data.length);
     crearArreglos(data);
-    //populateHeader(superHeroes);
-    //showHeroes(superHeroes);
   }
-
 }
 
+function crearArreglos(data){
+  tipos = [];
+  preguntas = [], opciones = [], correctas = [];
+  for (let key in data){
+    tipos.push(key);
+    let lasPreguntas = [], lasOpciones = [], lasCorrectas = [];
+    for (let j = 1; j <= Object.keys(data[key]).length; j++ ){
+      lasPreguntas.push(data[key][`pregunta-${j}`]["name"]);
+      lasOpciones.push(data[key][`pregunta-${j}`]["opciones"]);
+      lasCorrectas.push(data[key][`pregunta-${j}`]["correcta"]);
+    }
+    preguntas.push(lasPreguntas);
+    opciones.push(lasOpciones);
+    correctas.push(lasCorrectas);
+  }
+}
+
+//FUNCIONALIDAD BOTÓN LOGIN
+// Llama a reiniciar() y seleccionar()
 function login(){
   reiniciar();
   document.getElementById("nombreL").value = nombre;
@@ -134,23 +86,6 @@ function seleccionar(){
     document.getElementById("trivia").remove();
   }
 
-  /*
-  $(document).ready(function(){
-    const Url = `http://localhost:${port}`;
-    $.ajax({
-      url: Url,
-      type: "GET",
-      success: function(result){
-        datos = result;
-        //console.log(result);
-      },
-      error: function(error){
-        console.log(`Error ${error}`)
-      }
-    })
-  })
-  */
-  
   let divSelector = document.getElementById("divSelector");
   let select = document.createElement("select");
   select.setAttribute("id", "selectorT");
@@ -174,6 +109,8 @@ function seleccionar(){
   divEscoger.appendChild(button);
 }
 
+//FUNCIONALIDAD BOTÓN SELECCIONAR
+// Llama a onLoad()
 function jugar(){
   escogido = document.getElementById("selectorT").value;
   const msg = document.getElementById("bienvenida");
@@ -229,6 +166,8 @@ function onLoad(){
   }
 }
 
+//FUNCIONALIDAD BOTÓN CALIFICAR
+// Llama a evaluar()
 function calificar() {
   //Esconde el botón de contestar y muestra el de reiniciar
   document.getElementById("reiniciar").style.display = 'flex';
@@ -282,22 +221,5 @@ function evaluar(contador, sumar){
   }
   if (!selected) {
     pEmoji.innerHTML = "\t💬 ❌";
-  }
-}
-
-function crearArreglos(data){
-  tipos = [];
-  preguntas = [], opciones = [], correctas = [];
-  for (let key in data){
-    tipos.push(key);
-    let lasPreguntas = [], lasOpciones = [], lasCorrectas = [];
-    for (let j = 1; j <= Object.keys(data[key]).length; j++ ){
-      lasPreguntas.push(data[key][`pregunta-${j}`]["name"]);
-      lasOpciones.push(data[key][`pregunta-${j}`]["opciones"]);
-      lasCorrectas.push(data[key][`pregunta-${j}`]["correcta"]);
-    }
-    preguntas.push(lasPreguntas);
-    opciones.push(lasOpciones);
-    correctas.push(lasCorrectas);
   }
 }
