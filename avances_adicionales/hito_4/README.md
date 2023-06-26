@@ -1,5 +1,25 @@
 # Bootcamp-Laboratoria-squad-1.3
 Repositorio para mostrar los avances del bootcamp de laboratoria en el proyecto de realizar una Trivia
+Para este proyecto se instalaron algunos paquetes de python y un ambiente virtual para utilizar de python
+de manera local. La carpeta donde se encuentra está oculta (**.venv**). Para correr el servidor de python 
+que se encarga de leer los archivos .txt de la base de datos en el directorio **datos**.
+
+                pip3 install virtualenv
+                python3 -m virtualenv .venv
+                source .venv/bin/activate
+                pip install flask
+                pip install flask-cors
+
+Desde la terminal en el directorio hito_4 ejecutar en terminal para activar el ambiente virtual
+
+                source .venv/bin/activate
+
+Ahora ejecutamos el archivo del servidor de python con flask que tiene solo un route get
+                
+                python app.py
+
+Ahora que se tiene el servidor de python *running* podemos lanzar el index.html en el navegador
+
 
 # Proyecto Trivia!
 

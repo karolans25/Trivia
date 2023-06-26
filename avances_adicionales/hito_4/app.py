@@ -1,14 +1,7 @@
-from flask import Flask, render_template
+#from flask import request, Flask, render_template
+from flask import Flask
+from flask_cors import CORS
 import json
-from requests_html import HTMLSession
-
-app = Flask(__name__)
-
-session = HTMLSession()
- 
-resp = session.get('https://trivia/datos')
-
-resp.html.render()
 
 docs = ["datos/html.txt", "datos/javascript.txt", "datos/css.txt"]
 
@@ -32,17 +25,14 @@ datos = read(docs[0])
 with open('datos/html.json', 'w') as file:
     json.dump(datos, file, indent=4)
 
-#print(preguntas['pregunta-60'])
-"""open("datos/html.txt", "r")
+
+app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
-def index():
-    name = ['Joe','John','Jim','Paul','Niall','Tom']
-    return render_template('index.html', name=name)
+def home():
+    return datos
 
 if __name__ == "__main__":
-    app.run(debug=True, port=4000)
+    app.run(debug=True, port=8080)
 
-# En javascript
-# test = {{ name | tojson }};
-"""

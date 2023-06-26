@@ -68,6 +68,8 @@ let puntaje = 0;
 
 let maxPuntaje = 100;
 
+let port = 8080;
+
 function mostrar(n){
   nombre = n;
 }
@@ -129,6 +131,35 @@ function seleccionar(){
   if (document.getElementById("trivia")){
     document.getElementById("trivia").remove();
   }
+
+  /*
+  const Http = new XMLHttpRequest();
+  const url='localhost:4000';
+  Http.open("GET", url);
+  Http.send();
+  alert("Prueba");
+
+  Http.onreadystatechange = function(){
+    if(this.readyState==4 && this.status==200){
+      console.log(Http.responseText)
+    }
+  }
+  */
+
+  $(document).ready(function(){
+    const Url = `http://localhost:${port}`;
+    $.ajax({
+      url: Url,
+      type: "GET",
+      success: function(result){
+        console.log(result)
+      },
+      error: function(error){
+        console.log(`Error ${error}`)
+      }
+    })
+  })
+
   let divSelector = document.getElementById("divSelector");
   let select = document.createElement("select");
   select.setAttribute("id", "selectorT");
