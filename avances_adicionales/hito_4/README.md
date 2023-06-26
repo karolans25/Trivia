@@ -10,6 +10,10 @@ que se encarga de leer los archivos .txt de la base de datos en el directorio **
                 pip install flask
                 pip install flask-cors
 
+Debemos pararnos sobre el directorio *hito_4* 
+
+                cd avances_adicionales/hito_4
+
 Desde la terminal en el directorio hito_4 ejecutar en terminal para activar el ambiente virtual
 
                 source .venv/bin/activate
@@ -109,5 +113,8 @@ pista de javascript.
 
 [Ayuda con Python (Flask) y Javascript](https://dataanalyticsireland.ie/es/2021/12/13/como-pasar-una-variable-javascript-a-python-usando-json/)
 
-[Preguntas de html](<!--https://unipython.com/las-60-preguntas-y-respuestas-mas-frecuentes-de-html-y-html5/#google_vignette-->
-)
+[Preguntas de html](https://unipython.com/las-60-preguntas-y-respuestas-mas-frecuentes-de-html-y-html5/#google_vignette)
+
+[Pregutnas de javascript](https://unipython.com/preguntas-entrevista-examen-lenguaje-javscript/)
+
+[Pregunta de css](https://es.bitdegree.org/tutoriales/que-es-css/)

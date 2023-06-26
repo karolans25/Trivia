@@ -6,6 +6,7 @@
 // Use your menus or right-click / control-click and choose "Inspect" > "Console"
 // console.log("Hello 🌎");
 
+/**
 let tipos = ["Comidas", "Bebidas", "Dulces"];
 
 let preguntas = [ ["1. ¿Cuáles son dulces típicos de México?",
@@ -21,8 +22,6 @@ let preguntas = [ ["1. ¿Cuáles son dulces típicos de México?",
                    "2. ¿Cuáles son bebidas frías típicas de Colombia?"
                   ]
                 ];
-
-//let test = {{ preguntas | tojson }};
 
 let opciones = [  [ ["Suspiro, turrón, alfajor", 
                      "Papajotes, torrijas, churros", 
@@ -59,6 +58,12 @@ let opciones = [  [ ["Suspiro, turrón, alfajor",
 //let correctas = [[2, 0, 2, 1], [1, 1, 2, 0]];
 //let correctas = [[2, 0, 2], [1, 1, 2, 0]];
 let correctas = [[2, 0, 2], [1, 1, 2, 0], [0, 0]];
+*/
+
+let tipos = [];
+let preguntas = [];
+let opciones = [];
+let correctas = [];
 
 let escogido = 0;
 
@@ -74,23 +79,6 @@ function mostrar(n){
   nombre = n;
 }
 
-//Aún no implementada
-function myFunction() {
-  const firstname = document.getElementById("fname").value;
-  const lastname = document.getElementById("lname").value;
-  //const dict_values = {firstname, lastname} //Pass the javascript variables to a dictionary.
-  const dict_values = {nombre} //Pass the javascript variables to a dictionary.
-  const s = JSON.stringify(dict_values); // Stringify converts a JavaScript object or value to a JSON string
-  console.log(s); // Prints the variables to console window, which are in the JSON format
-  window.alert(s)
-  $.ajax({
-      url:"/test",
-      type:"POST",
-      contentType: "application/json",
-      data: JSON.stringify(s)});
-
-}
-
 function reiniciar(){
 //Esconde los div y container
   document.getElementById("containerTrivia").style.display = 'none';
@@ -103,6 +91,21 @@ function reiniciar(){
   //Pone por defecto el valor del input text
   document.getElementById("nombreL").value = "";
   document.getElementById("bienvenida").innerHTML = "¿Quieres empezar a jugar?";
+
+  const requestURL = `http://localhost:${port}`;
+  const request = new XMLHttpRequest();
+  request.open('GET', requestURL);
+  request.responseType = 'json';
+  request.send();
+  request.onload = function() {
+    const data = request.response;
+    //datos = superHeroes;
+    console.log(data.length);
+    crearArreglos(data);
+    //populateHeader(superHeroes);
+    //showHeroes(superHeroes);
+  }
+
 }
 
 function login(){
@@ -111,7 +114,6 @@ function login(){
   //Modifica el valor del mensaje de bienvenida
   //document.getElementById("bienvenida").innerHTML = "¿Quieres empezar a jugar?";
   alert ("Hola " + nombre);
-  //myFunction();
   seleccionar();
 }
 
@@ -133,33 +135,22 @@ function seleccionar(){
   }
 
   /*
-  const Http = new XMLHttpRequest();
-  const url='localhost:4000';
-  Http.open("GET", url);
-  Http.send();
-  alert("Prueba");
-
-  Http.onreadystatechange = function(){
-    if(this.readyState==4 && this.status==200){
-      console.log(Http.responseText)
-    }
-  }
-  */
-
   $(document).ready(function(){
     const Url = `http://localhost:${port}`;
     $.ajax({
       url: Url,
       type: "GET",
       success: function(result){
-        console.log(result)
+        datos = result;
+        //console.log(result);
       },
       error: function(error){
         console.log(`Error ${error}`)
       }
     })
   })
-
+  */
+  
   let divSelector = document.getElementById("divSelector");
   let select = document.createElement("select");
   select.setAttribute("id", "selectorT");
@@ -292,5 +283,21 @@ function evaluar(contador, sumar){
   if (!selected) {
     pEmoji.innerHTML = "\t💬 ❌";
   }
+}
 
+function crearArreglos(data){
+  tipos = [];
+  preguntas = [], opciones = [], correctas = [];
+  for (let key in data){
+    tipos.push(key);
+    let lasPreguntas = [], lasOpciones = [], lasCorrectas = [];
+    for (let j = 1; j <= Object.keys(data[key]).length; j++ ){
+      lasPreguntas.push(data[key][`pregunta-${j}`]["name"]);
+      lasOpciones.push(data[key][`pregunta-${j}`]["opciones"]);
+      lasCorrectas.push(data[key][`pregunta-${j}`]["correcta"]);
+    }
+    preguntas.push(lasPreguntas);
+    opciones.push(lasOpciones);
+    correctas.push(lasCorrectas);
+  }
 }
